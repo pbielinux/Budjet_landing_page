@@ -1,0 +1,43 @@
+.hero {
+    &__image {
+        position: relative;
+        background-image: url('/images/bg-intro-mobile.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 20.5rem;
+        margin-bottom: 40px;
+
+        &::before {
+            content: "";
+            margin-top: 90px;
+            height: 100%;
+            width: 90%;
+            position: absolute;
+            background-image: url('/images/Mac.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center top;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__text {
+        text-align: center;
+
+        h1 {
+            font-weight: 300;
+            font-size: 2.31rem;
+            line-height: 1.15;
+            color: $darkBlue;
+            margin-bottom: 2.25rem;
+        }
+
+        p {
+            line-height: 1.5;
+            margin-bottom: 2.25rem;
+        }
+
+    }
+}
