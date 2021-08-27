@@ -2,9 +2,8 @@
 
     nav {
         position: relative;
+        z-index: 1;
         background-color: $white;
-        padding-top: 1.065rem;
-        padding-bottom: 1.5rem;
         user-select: none;
     }
     
@@ -35,6 +34,7 @@
 
     &__menu {
         position: absolute;
+        z-index: 1;
         background: $white;
         border-radius: 5px;
         margin-top: 1.3rem;
@@ -94,18 +94,9 @@
         }
     }
 
-    &__cta {
-        font-size: $font-sm;
-        color: white;
-        transition: opacity 300ms ease-in-out;
-
-        &:hover {
-            opacity: 0.80;
-        }
-    }
-
     .overlay {
         position: fixed;
+        z-index: 1;
         top: 0px;
         right: 0px;
         bottom: 0px;
