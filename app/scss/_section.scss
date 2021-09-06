@@ -1,3 +1,124 @@
+.sticky-wrapper {
+    height: 4520px;
+    border-bottom: 1px solid #FFF;
+}
+
+.sticky-content {
+    position: sticky;
+    top: 52px;
+    height: 100vh;
+    min-height: 1480px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.hardware-wrapper {
+    width: 100%;
+    margin-top: -50px;
+}
+
+.image-sellers {
+    display: block;
+    z-index: 1;
+    position: relative;
+    will-change: transform;
+    transform: scale(0.7164);
+    width: 1891px;
+    height: 1084px;
+}
+
+.image-sellers::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 2338px;
+    height: 1584px;
+    background-size: 2338px 1584px;
+    background-repeat: no-repeat;
+    background-image: url("/images/shadow.png");
+    left: -5px;
+    top: -3px;
+}
+
+.image-hardware {
+    display: block;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 1892px;
+    height: 1084px;
+    background-size: 1892px 1084px;
+    background-repeat: no-repeat;
+    background-image: url("/images/section-hardware.jpg");
+    mask-size: 1892px 1084px;
+    mask-repeat: no-repeat;
+    mask-image: url("/images/mask.svg");
+}
+
+.section-sellers {
+    font-size: 18px;
+}
+
+.section-content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 980px;
+}
+
+.section-header-headline {
+    color: #2a6eff;
+    max-width: 66%;
+    font-size: 64px;
+    line-height: 1.0625;
+    font-weight: 500;
+    letter-spacing: -0.009em;
+}
+
+.text-transform-wrapper {
+    top: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.features-wrapper {
+=
+    position: relative;
+    padding-top: 60px;
+    height: 100vh;
+}
+
+.feature {
+    will-change: transform;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    opacity: 0;
+}
+
+.feature-item-headline {
+    color: #2a6eff;
+}
+
+.feature-text {
+    font-size: 19px;
+    line-height: 1.4211;
+    font-weight: 600;
+    letter-spacing: 0.012em;
+    max-width: 340px;
+}
+
+.section-header-intro {
+    max-width: 75%;
+    font-size: 24px;
+    line-height: 1.33341;
+    font-weight: 600;
+    letter-spacing: 0.009em;
+    padding: 0;
+}
+
 .text-block {
     color: black;
     text-align: center;

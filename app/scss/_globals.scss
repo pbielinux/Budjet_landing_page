@@ -9,6 +9,10 @@ html {
     box-sizing: inherit;
 }
 
+main {
+    display: block;
+}
+
 body {
     // Add resets;
     margin: 0;
@@ -34,6 +38,33 @@ h1, h2, h3 {
 .section {
     min-height: 100vh;
     background-color: $white;
+
+    &--pall {
+        padding-top: 140px;
+        padding-bottom: 140px;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+    &--py {
+        padding-top: 140px;
+        padding-bottom: 140px;
+    }
+    &--px {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+    &--pt {
+        padding-top: 140px;
+    }
+    &--pr {
+        padding-right: 1.5rem;
+    }
+    &--pb {
+        padding-bottom: 140px;
+    }
+    &--pl {
+        padding-left: 1.5rem;
+    }
 }
 
 a, a:visited, a:hover {
