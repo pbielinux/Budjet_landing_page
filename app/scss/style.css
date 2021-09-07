@@ -348,7 +348,7 @@ button:hover, .button:hover {
 
 .sticky-wrapper {
   height: 4520px;
-  border-bottom: 1px solid #FFF;
+  border-bottom: 1px solid red;
 }
 
 .sticky-content {
@@ -363,7 +363,6 @@ button:hover, .button:hover {
 
 .hardware-wrapper {
   width: 100%;
-  margin-top: -50px;
 }
 
 .image-sellers {
@@ -397,8 +396,8 @@ button:hover, .button:hover {
   z-index: 3;
   top: 0;
   left: 0;
-  width: 1892px;
-  height: 1084px;
+  width: 100%;
+  height: 100%;
   background-size: 1892px 1084px;
   background-repeat: no-repeat;
   background-image: url("/images/section-hardware.jpg");
@@ -449,10 +448,46 @@ button:hover, .button:hover {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   opacity: 0;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.feature:nth-child(2) {
+  top: calc(40% + 200px);
 }
 
 .feature-item-headline {
   color: #2a6eff;
+}
+
+.anim-feature-item {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+  -webkit-transition-timing-function: easeOutQuad;
+          transition-timing-function: easeOutQuad;
+  will-change: opacity, transform;
+  opacity: 0;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.js-feature-item-engaged {
+  opacity: 1;
+}
+
+.js-feature-item-transition {
+  -webkit-transform: translateY(-200px);
+          transform: translateY(-200px);
 }
 
 .feature-text {
