@@ -1,4 +1,4 @@
-const features = document.querySelectorAll('.feature');
+const features = document.querySelectorAll('.feature-content-wrapper');
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,22 +21,46 @@ tl.to(".centered-text-block", { autoAlpha: 0,  duration: 3 })
 .to(".image-app-placeholder", { transform: "matrix(1, 0, 0, 1, 0, 0)",  duration: 5, delay: -5 })
   .to(".hero-hardware", { transform: "matrix(1, 0, 0, 1, 0, 0)",  duration: 5 });
 
-const tl2 = gsap.timeline({
+/* gsap.set(".image-sellers", {
+  scaleX: 0.7164,
+  scaleY: 0.7164,
+  xPercent: -50,
+  left: "50%"
+});
+
+const tlSellers = gsap.timeline();
+
+tlSellers.to(".image-sellers", {
+  x: 500,
   scrollTrigger: {
-    id: "hardware",
+    id: "first",
     trigger: ".section-header",
-    start: "bottom top+=50",
+    start: "bottom top+=200",
     scrub: 1,
     markers: {
       startColor: "lime",
-      endColor: "lime"
+      endColor: "lime",
+    },
+  }
+}).to(".image-sellers", {
+  scaleX: 0.9,
+  scaleY: 0.9,
+  x: -800,
+  duration: 3,
+  toggleActions: "play complete reverse reverse",
+  scrollTrigger: {
+    id: "second",
+    trigger: "#feature-2",
+    start: "bottom-=50 center",
+    end: "bottom+=100 center",
+    scrub: 1,
+    markers: {
+      startColor: "lime",
+      endColor: "lime",
+      ident: 100
     },
   }
 });
-
-gsap.to(".image-sellers", 1, {left:'50%', xPercent:'-50'});
-
-tl2.to(".image-sellers", { transform: "matrix(0.7164, 0, 0, 0.7164, 440, 0)"});
 
 
 features.forEach((feature, index) => {
@@ -44,16 +68,29 @@ features.forEach((feature, index) => {
     trigger: feature,
     id: index+1,
     duration: 0.8,
-    start: "top+=20 30%",
-    end: "bottom 30%",
-    toggleActions: "play reverse reverse reverse",
+    start: "top-=55 center",
+    end: "bottom center",
     onEnter: () => {
       feature.classList.add('js-feature-item-engaged');
-      feature.classList.add('js-feature-item-transition');
+      if (index === 1 || index === 3) {
+        feature.classList.add('js-feature-item-transition');
+      }
     },
     onLeave: () => {
       feature.classList.remove('js-feature-item-engaged');
       feature.classList.add('js-feature-item-transition');
+    },
+    onEnterBack: () => {
+      feature.classList.add('js-feature-item-engaged');
+      if (index === 0 || index === 2) {
+        feature.classList.remove('js-feature-item-transition');
+      }
+    },
+    onLeaveBack: () => {
+      feature.classList.remove('js-feature-item-engaged');
+      if (index === 0 || index === 2) {
+        feature.classList.remove('js-feature-item-transition');
+      }
     },
     markers: {
       startColor: "fuchsia",
@@ -62,4 +99,4 @@ features.forEach((feature, index) => {
       indent: 100
     }
   });
-});
+}); */
