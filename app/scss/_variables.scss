@@ -12,3 +12,83 @@ $font-sm: 0.875rem; // 14px
 $font-md: 1.125rem; // 18px
 $font-lg: 1.25rem; // 20px
 $font-xl: 3.25rem; // 52px
+
+//
+
+:root {
+  --indigo: #622aff;
+  --blue: #0e90db;
+  --pink: #e94256;
+  --green: #0b9e43;
+  --azure: #027fff;
+  --tile-border-radius: 30px;
+  --tile-padding: 40px;
+  --tile-content-margin: 52px;
+  --grid-gutter: 25px;
+  --tile-copy-margin-top: 0.77em;
+}
+@media only screen and (max-width: 1068px) {
+  :root {
+    --tile-border-radius: 25px;
+    --tile-content-margin: 33px;
+    --tile-copy-margin-top: 1em;
+    --grid-gutter: 20px;
+  }
+}
+@media only screen and (max-width: 734px) {
+  :root {
+    --tile-border-radius: 20px;
+    --tile-content-margin: 43px;
+    --tile-padding: 30px;
+    --tile-copy-margin-top: 0.85em;
+    --grid-gutter: 15px;
+  }
+}
+@media only screen and (max-width: 374px) {
+  :root {
+    --tile-border-radius: 0;
+  }
+}
+
+// Section sellers
+.section-sellers {
+  --sellers-sticky-content-min-height: 1480px;
+  --sellers-sticky-wrapper-height: 4520px;
+  --sellers-sticky-wrapper-fallback-min-height: 4210px;
+  --sellers-hardware-initial-y-offset: -90px;
+  --sellers-hardware-initial-scale: 0.7164;
+  --sellers-hardware-fallback-left-offset: -190px;
+  --sellers-hardware-fallback-right-offset: -750px;
+}
+@media only screen and (max-width: 1068px) {
+  .section-sellers {
+    --sellers-sticky-content-min-height: 3330px;
+    --sellers-sticky-wrapper-fallback-min-height: 3360px;
+    --sellers-hardware-fallback-left-offset: -105px;
+    --sellers-hardware-fallback-right-offset: -680px;
+    --sellers-static-row-offset-top: -40px;
+    --sellers-static-content-padding: 75px 0;
+    --sellers-static-features-margin-top: -110px;
+    --sellers-static-features-margin-bottom: 88px;
+  }
+}
+@media only screen and (max-width: 734px) {
+  .section-sellers {
+    overflow: hidden;
+    --sellers-hardware-initial-scale: 1;
+    --sellers-hardware-fallback-left-offset: -5px;
+    --sellers-static-row-offset-top: 0;
+    --sellers-static-content-padding: 0 0 100px 0;
+    --sellers-static-features-margin-top: -5px;
+    --sellers-static-features-margin-bottom: 0;
+  }
+}
+
+.js .section-sellers {
+  --macos-dock-slide-duration: 0.8s;
+  --macos-dock-easing-function: easeOutQuad;
+  --macos-dock-y-translate: 70px;
+  --feature-slide-duration: 0.8s;
+  --feature-easing-function: easeOutQuad;
+  --feature-y-translate: -200px;
+}

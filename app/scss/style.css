@@ -1,627 +1,3672 @@
-.has-fade {
-  visibility: hidden;
+@charset "UTF-8";
+:root {
+  --indigo: #622aff;
+  --blue: #0e90db;
+  --pink: #e94256;
+  --green: #0b9e43;
+  --azure: #027fff;
+  --tile-border-radius: 30px;
+  --tile-padding: 40px;
+  --tile-content-margin: 52px;
+  --grid-gutter: 25px;
+  --tile-copy-margin-top: 0.77em;
 }
 
-@-webkit-keyframes fade-in {
-  from {
-    visibility: hidden;
-    opacity: 0;
-  }
-  to {
-    visibility: visible;
-    opacity: 1;
-  }
-}
-
-@keyframes fade-in {
-  from {
-    visibility: hidden;
-    opacity: 0;
-  }
-  to {
-    visibility: visible;
-    opacity: 1;
+@media only screen and (max-width: 1068px) {
+  :root {
+    --tile-border-radius: 25px;
+    --tile-content-margin: 33px;
+    --tile-copy-margin-top: 1em;
+    --grid-gutter: 20px;
   }
 }
 
-.fade-in {
-  -webkit-animation: fade-in 200ms ease-in-out forwards;
-          animation: fade-in 200ms ease-in-out forwards;
-}
-
-@-webkit-keyframes fade-out {
-  from {
-    visibility: visible;
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    visibility: hidden;
+@media only screen and (max-width: 734px) {
+  :root {
+    --tile-border-radius: 20px;
+    --tile-content-margin: 43px;
+    --tile-padding: 30px;
+    --tile-copy-margin-top: 0.85em;
+    --grid-gutter: 15px;
   }
 }
 
-@keyframes fade-out {
-  from {
-    visibility: visible;
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    visibility: hidden;
+@media only screen and (max-width: 374px) {
+  :root {
+    --tile-border-radius: 0;
   }
 }
 
-.fade-out {
-  -webkit-animation: fade-out 200ms ease-in-out forwards;
-          animation: fade-out 200ms ease-in-out forwards;
+.section-sellers {
+  --sellers-sticky-content-min-height: 1480px;
+  --sellers-sticky-wrapper-height: 4520px;
+  --sellers-sticky-wrapper-fallback-min-height: 4210px;
+  --sellers-hardware-initial-y-offset: -90px;
+  --sellers-hardware-initial-scale: 0.7164;
+  --sellers-hardware-fallback-left-offset: -190px;
+  --sellers-hardware-fallback-right-offset: -750px;
 }
 
-html {
-  font-size: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+@media only screen and (max-width: 1068px) {
+  .section-sellers {
+    --sellers-sticky-content-min-height: 3330px;
+    --sellers-sticky-wrapper-fallback-min-height: 3360px;
+    --sellers-hardware-fallback-left-offset: -105px;
+    --sellers-hardware-fallback-right-offset: -680px;
+    --sellers-static-row-offset-top: -40px;
+    --sellers-static-content-padding: 75px 0;
+    --sellers-static-features-margin-top: -110px;
+    --sellers-static-features-margin-bottom: 88px;
+  }
 }
 
-*, *::before, *::after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+@media only screen and (max-width: 734px) {
+  .section-sellers {
+    overflow: hidden;
+    --sellers-hardware-initial-scale: 1;
+    --sellers-hardware-fallback-left-offset: -5px;
+    --sellers-static-row-offset-top: 0;
+    --sellers-static-content-padding: 0 0 100px 0;
+    --sellers-static-features-margin-top: -5px;
+    --sellers-static-features-margin-bottom: 0;
+  }
 }
 
-main {
+.js .section-sellers {
+  --macos-dock-slide-duration: 0.8s;
+  --macos-dock-easing-function: easeOutQuad;
+  --macos-dock-y-translate: 70px;
+  --feature-slide-duration: 0.8s;
+  --feature-easing-function: easeOutQuad;
+  --feature-y-translate: -200px;
+}
+
+.section-hero {
+  max-width: 100%;
+  height: 275vh;
+  min-height: 3464px;
+  overflow: initial;
+  margin-top: calc(-1 * var(--r-globalnav-height) - var(--r-localnav-height));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 1068px) {
+  .section-hero {
+    min-height: 3220px;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .section-hero {
+    height: auto;
+    min-height: 2402px;
+  }
+}
+
+.hero-fallback .section-hero {
+  height: auto;
+  min-height: auto;
+}
+
+.no-chrome .section-hero .title-animation {
+  display: inline-block;
+  will-change: transform;
+  opacity: 0;
+  -webkit-transition: 0.65s ease-in-out transform 0.5s, 0.55s ease-in opacity 0.5s;
+  transition: 0.65s ease-in-out transform 0.5s, 0.55s ease-in opacity 0.5s;
+}
+
+.section-hero .title-animation.title-transform-1 {
+  -webkit-transform: translateX(-40px);
+  transform: translateX(-40px);
+}
+
+.section-hero .title-animation.title-transform-2 {
+  -webkit-transform: translateX(-20px);
+  transform: translateX(-20px);
+}
+
+.section-hero .title-animation.title-transform-3 {
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+}
+
+.section-hero .title-animation.title-transform-4 {
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+}
+
+.section-hero .title-animation.title-transform-5 {
+  -webkit-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+.section-hero .title-animation.title-transform-6 {
+  -webkit-transform: translateX(40px);
+  transform: translateX(40px);
+}
+
+.section-hero .js-opacity-fade {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.section-hero .js-opacity-fade .title-animation {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.section-hero .js-opacity-fade .product-intro {
+  -webkit-transform: translateY(0px) !important;
+  transform: translateY(0px) !important;
+}
+
+.section-hero .js-tranlation {
+  -webkit-transform: translateY(0) !important;
+  transform: translateY(0) !important;
+}
+
+.no-hero-fallback .section-hero .chrome-block {
+  height: 100vh;
+  position: fixed;
+  min-height: 1138px;
+  width: 100%;
+  z-index: 1;
   display: block;
+  background: #fff;
+  -webkit-transition: 0.85s linear opacity;
+  transition: 0.85s linear opacity;
+  pointer-events: none;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  font-size: 1.125rem;
-  font-weight: 300;
-  line-height: 1.3;
+.section-hero div[data-component-list="HeroComponent"] {
+  top: 0;
+  width: 100%;
+  background: #2e1d7d;
+  background: radial-gradient(circle, #2e1d7d 0%, #050939 80%);
+  will-change: transform;
 }
 
-@media (min-width: 64em) {
-  body {
-    font-size: 1.125rem;
-  }
+.section-hero div[data-component-list="HeroComponent"].visibility-hidden {
+  visibility: hidden !important;
 }
 
-body.noscroll {
+.no-hero-fallback .section-hero div[data-component-list="HeroComponent"] {
+  position: -webkit-sticky;
+  position: sticky;
+  min-height: 100vh;
   overflow: hidden;
 }
 
-h1, h2, h3 {
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback .section-hero div[data-component-list="HeroComponent"] {
+    height: auto;
+  }
+}
+
+.hero-fallback .section-hero div[data-component-list="HeroComponent"] {
+  overflow: hidden;
+}
+
+.no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.gradient-block {
+  width: 1528px;
+  height: 1108px;
+  background-size: 1528px 1108px;
+  background-repeat: no-repeat;
+  background-image: url("/images/saved/shadow_large.png");
+  position: relative;
+  left: 50%;
+  margin-left: -764px;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-size: 100px 100px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.gradient-block {
+    background-image: url("/images/saved/shadow_large_2x.png");
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.gradient-block {
+    width: 1158px;
+    height: 858px;
+    background-size: 1158px 858px;
+    background-repeat: no-repeat;
+    background-image: url("/images/saved/shadow_medium.png");
+  }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.gradient-block {
+    background-image: url("/images/saved/shadow_medium_2x.png");
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.gradient-block {
+    width: 492px;
+    height: 366px;
+    background-size: 492px 366px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_hardware_shadow__rfrxndfrhcia_small.png");
+  }
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.gradient-block {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_hardware_shadow__rfrxndfrhcia_small_2x.png");
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.gradient-block {
+    left: 50%;
+    margin-left: -579px;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.gradient-block {
+    left: 50%;
+    margin-left: -246px;
+  }
+}
+
+.hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware {
+  width: 1362px;
+  height: 898px;
+  background-size: 1362px 898px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_fallback__fi60jv86taem_large.png");
+  position: relative;
+  left: 50%;
+  margin-left: -681px;
+  -webkit-transform: unset !important;
+  transform: unset !important;
+  top: 170px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_fallback__fi60jv86taem_large_2x.png");
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware {
+    width: 1059px;
+    height: 684px;
+    background-size: 1059px 684px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_fallback__fi60jv86taem_medium.png");
+  }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_fallback__fi60jv86taem_medium_2x.png");
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware {
+    width: 439px;
+    height: 292px;
+    background-size: 439px 292px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_fallback__fi60jv86taem_small.png");
+  }
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  .hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_fallback__fi60jv86taem_small_2x.png");
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware {
+    left: 50%;
+    margin-left: -529.5px;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware {
+    left: 50%;
+    margin-left: -219.5px;
+  }
+}
+
+.hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.image-screen-placeholder {
+  display: none !important;
+}
+
+.no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware {
+  will-change: transform;
+  position: relative;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  margin-top: 0;
+  -webkit-transform-origin: center 88px;
+  transform-origin: center 88px;
+  background-image: radial-gradient(ellipse at center, #641544 0%, rgba(0, 0, 0, 0) 67%);
+  width: 1362px;
+  height: 898px;
+  position: relative;
+  left: 50%;
+  margin-left: -681px;
+}
+
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware {
+    width: 1059px;
+    height: 684px;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware {
+    width: 549px;
+    height: 365px;
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware {
+    left: 50%;
+    margin-left: -529.5px;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware {
+    left: 50%;
+    margin-left: -274.5px;
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware {
+    -webkit-transform-origin: center 75px;
+    transform-origin: center 75px;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware {
+    -webkit-transform-origin: center 15px;
+    transform-origin: center 15px;
+    width: 439px;
+    height: 292px;
+    left: 50%;
+    margin-left: -219.5px;
+  }
+}
+
+.no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  width: 1362px;
+  height: 898px;
+  background-size: 1362px 898px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_hardware__b9fsoccpzb6q_large.png");
+  position: relative;
+  left: 50%;
+  margin-left: -681px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware:before {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_hardware__b9fsoccpzb6q_large_2x.png");
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware:before {
+    width: 1059px;
+    height: 684px;
+    background-size: 1059px 684px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_hardware__b9fsoccpzb6q_medium.png");
+  }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware:before {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_hardware__b9fsoccpzb6q_medium_2x.png");
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware:before {
+    width: 549px;
+    height: 365px;
+    background-size: 549px 365px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_hardware__b9fsoccpzb6q_small.png");
+  }
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware:before {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_hardware__b9fsoccpzb6q_small_2x.png");
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware:before {
+    left: 50%;
+    margin-left: -529.5px;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware:before {
+    left: 50%;
+    margin-left: -274.5px;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware:before {
+    background-size: 439px 292px;
+    width: 439px;
+    height: 292px;
+    left: 50%;
+    margin-left: -219.5px;
+  }
+}
+
+.no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.screen-placeholder {
+  width: 1720px;
+  height: 1076px;
+  background-size: 1720px 1076px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_desktop__gd4s9ddcapu2_large.jpg");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.screen-placeholder {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_desktop__gd4s9ddcapu2_large_2x.jpg");
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.screen-placeholder {
+    width: 1307px;
+    height: 819px;
+    background-size: 1307px 819px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_desktop__gd4s9ddcapu2_medium.jpg");
+  }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.screen-placeholder {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_desktop__gd4s9ddcapu2_medium_2x.jpg");
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.screen-placeholder {
+    width: 562px;
+    height: 355px;
+    background-size: 562px 355px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_desktop__gd4s9ddcapu2_small.jpg");
+  }
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.screen-placeholder {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_desktop__gd4s9ddcapu2_small_2x.jpg");
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.screen-placeholder {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_desktop__gd4s9ddcapu2_small_2x.jpg");
+  }
+}
+
+.no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.image-screen-placeholder {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 30px;
+  width: 882px;
+  height: 552px;
+  background-size: 882px 552px;
+  -webkit-transform: perspective(0);
+  transform: perspective(0);
+}
+
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.image-screen-placeholder {
+    top: 26px;
+    width: 670px;
+    height: 420px;
+    background-size: 670px 420px;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.image-screen-placeholder {
+    image-rendering: optimizeQuality;
+    top: 12px;
+    left: 1px;
+    width: 288px;
+    height: 182px;
+    background-size: 288px 182px;
+  }
+}
+
+.no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app {
+  position: absolute;
+  will-change: transform;
+}
+
+.no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-maps {
+  width: 768px;
+  height: 461px;
+  background-size: 768px 461px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_map__mt4m02rrevue_large.png");
+  top: -4px;
+  left: 125px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-maps {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_map__mt4m02rrevue_large_2x.png");
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-maps {
+    width: 581px;
+    height: 349px;
+    background-size: 581px 349px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_map__mt4m02rrevue_medium.png");
+  }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-maps {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_map__mt4m02rrevue_medium_2x.png");
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-maps {
+    width: 248px;
+    height: 150px;
+    background-size: 248px 150px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_map__mt4m02rrevue_small.png");
+  }
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-maps {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_map__mt4m02rrevue_small_2x.png");
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-maps {
+    top: 1px;
+    left: 110px;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-maps {
+    top: 5px;
+    left: 41px;
+  }
+}
+
+.no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-messages {
+  width: 594px;
+  height: 425px;
+  background-size: 594px 425px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_bitmap__fu803j37gsii_large.png");
+  top: 178px;
+  left: 216px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-messages {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_bitmap__fu803j37gsii_large_2x.png");
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-messages {
+    width: 449px;
+    height: 322px;
+    background-size: 449px 322px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_bitmap__fu803j37gsii_medium.png");
+  }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-messages {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_bitmap__fu803j37gsii_medium_2x.png");
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-messages {
+    width: 192px;
+    height: 138px;
+    background-size: 192px 138px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_bitmap__fu803j37gsii_small.png");
+  }
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-messages {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_bitmap__fu803j37gsii_small_2x.png");
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-messages {
+    top: 141px;
+    left: 176px;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-messages {
+    top: 60px;
+    left: 68px;
+  }
+}
+
+.no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-safari {
+  width: 803px;
+  height: 589px;
+  background-size: 803px 589px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_safari__bralnc3zflle_large.png");
+  top: 43px;
+  right: 300px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-safari {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_safari__bralnc3zflle_large_2x.png");
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-safari {
+    width: 608px;
+    height: 446px;
+    background-size: 608px 446px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_safari__bralnc3zflle_medium.png");
+  }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-safari {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_safari__bralnc3zflle_medium_2x.png");
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-safari {
+    width: 259px;
+    height: 191px;
+    background-size: 259px 191px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_safari__bralnc3zflle_small.png");
+  }
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-safari {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_safari__bralnc3zflle_small_2x.png");
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-safari {
+    top: 30px;
+    right: 243px;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-safari {
+    top: 10px;
+    right: 97px;
+  }
+}
+
+.no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-notifications {
+  width: 264px;
+  height: 325px;
+  background-size: 264px 325px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_control_center__f3to46jowtqq_large.png");
+  top: -5px;
+  right: 199px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-notifications {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_control_center__f3to46jowtqq_large_2x.png");
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-notifications {
+    width: 200px;
+    height: 247px;
+    background-size: 200px 247px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_control_center__f3to46jowtqq_medium.png");
+  }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-notifications {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_control_center__f3to46jowtqq_medium_2x.png");
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-notifications {
+    width: 85px;
+    height: 106px;
+    background-size: 85px 106px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_control_center__f3to46jowtqq_small.png");
+  }
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-notifications {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_control_center__f3to46jowtqq_small_2x.png");
+  }
+}
+
+@media only screen and (min-width: 1069px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 1069px) and (min-resolution: 1.5dppx), only screen and (min-width: 1069px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-notifications {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_control_center__f3to46jowtqq_large.png");
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-notifications {
+    top: 0;
+    right: 164px;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-notifications {
+    right: 63px;
+  }
+}
+
+.no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-dock {
+  width: 1105px;
+  height: 63px;
+  background-size: 1105px 63px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_dock__dgoni391o7qu_large.png");
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 319px;
+  -webkit-transform-origin: bottom;
+  transform-origin: bottom;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-dock {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_dock__dgoni391o7qu_large_2x.png");
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-dock {
+    width: 836px;
+    height: 48px;
+    background-size: 836px 48px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_dock__dgoni391o7qu_medium.png");
+  }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-dock {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_dock__dgoni391o7qu_medium_2x.png");
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-dock {
+    width: 356px;
+    height: 22px;
+    background-size: 356px 22px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_dock__dgoni391o7qu_small.png");
+  }
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-dock {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_dock__dgoni391o7qu_small_2x.png");
+  }
+}
+
+@media only screen and (min-width: 1069px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 1069px) and (min-resolution: 1.5dppx), only screen and (min-width: 1069px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-dock {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_dock__dgoni391o7qu_large.png");
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-dock {
+    bottom: 243px;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware
+.hero-animation-app.image-app-dock {
+    bottom: 101px;
+  }
+}
+
+@media only screen and (min-width: 1069px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 1069px) and (min-resolution: 1.5dppx), only screen and (min-width: 1069px) and (min-resolution: 144dpi) {
+  .no-hero-fallback.chrome
+.section-hero
+div[data-component-list="HeroComponent"]
+.hero-hardware:before {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_hardware__b9fsoccpzb6q_large.png");
+  }
+}
+
+.section-hero div[data-component-list="HeroComponent"] .intro-text-block {
+  position: absolute;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  z-index: 3;
+  pointer-events: none;
+  height: 100vh;
+}
+
+.hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.intro-text-block {
+  display: none;
+}
+
+.no-hero-fallback.no-chrome
+.section-hero
+div[data-component-list="HeroComponent"]
+.intro-text-block {
+  will-change: opacity;
+  -webkit-transition: 0.9s opacity 0.5s;
+  transition: 0.9s opacity 0.5s;
+  opacity: 0;
+}
+
+.section-hero
+div[data-component-list="HeroComponent"]
+.intro-text-block
+.product-name,
+.section-hero
+div[data-component-list="HeroComponent"]
+.intro-text-block
+.product-intro {
+  color: #fff;
+  will-change: opacity;
+}
+
+.section-hero
+div[data-component-list="HeroComponent"]
+.intro-text-block
+.product-name.title,
+.section-hero
+div[data-component-list="HeroComponent"]
+.intro-text-block
+.product-intro.title {
   margin-top: 0;
 }
 
-.section {
-  min-height: 100vh;
-  background-color: white;
+@media only screen and (max-width: 734px) {
+  .section-hero
+div[data-component-list="HeroComponent"]
+.intro-text-block
+.product-name.title,
+  .section-hero
+div[data-component-list="HeroComponent"]
+.intro-text-block
+.product-intro.title {
+    position: relative;
+    left: -3px;
+  }
 }
 
-.section--pall {
-  padding-top: 140px;
-  padding-bottom: 140px;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
+.no-chrome
+.section-hero
+div[data-component-list="HeroComponent"]
+.intro-text-block
+.product-intro {
+  -webkit-transform: translateY(25px);
+  transform: translateY(25px);
+  -webkit-transition: 0.5s linear transform 0.4s;
+  transition: 0.5s linear transform 0.4s;
 }
 
-.section--py {
-  padding-top: 140px;
-  padding-bottom: 140px;
+.section-hero
+div[data-component-list="HeroComponent"]
+.intro-text-block
+.centered-text-block {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
 }
 
-.section--px {
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
+.section-hero div[data-component-list="HeroComponent"] .intro-text {
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 0 165px;
+  text-align: center;
 }
 
-.section--pt {
-  padding-top: 140px;
+@media only screen and (min-width: 1069px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.intro-text {
+    margin-top: -250px;
+  }
 }
 
-.section--pr {
-  padding-right: 1.5rem;
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.intro-text {
+    max-width: 685px;
+    padding: 100px 0;
+    margin-top: -100px;
+  }
 }
 
-.section--pb {
-  padding-bottom: 140px;
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.intro-text {
+    max-width: 435px;
+    padding: 0 30px 110px;
+    margin-top: 0;
+  }
 }
 
-.section--pl {
-  padding-left: 1.5rem;
+.hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.intro-text {
+  position: relative;
+  padding: 100px 0 170px;
 }
 
-a, a:visited, a:hover {
-  text-decoration: none;
+@media only screen and (max-width: 1068px) {
+  .hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.intro-text {
+    padding: 155px 30px 100px;
+  }
 }
 
-.container {
-  max-width: 1400px;
-  margin: auto;
+@media only screen and (max-width: 734px) {
+  .hero-fallback
+.section-hero
+div[data-component-list="HeroComponent"]
+.intro-text {
+    padding: 155px 30px 110px;
+  }
 }
 
-.container--pall {
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
+.section-hero
+div[data-component-list="HeroComponent"]
+.intro-text
+.violator-secondary {
+  border-color: #f5f5f7;
+  color: #f5f5f7;
 }
 
-.container--py {
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem;
+.section-hero
+div[data-component-list="HeroComponent"]
+.intro-text
+.intro-text-subheader {
+  margin-top: 27px;
 }
 
-.container--px {
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
+@media only screen and (max-width: 1068px) {
+  .section-hero
+div[data-component-list="HeroComponent"]
+.intro-text
+.intro-text-subheader {
+    margin-top: 8px;
+  }
 }
 
-.container--pt {
-  padding-top: 1.75rem;
+.section-hero
+div[data-component-list="HeroComponent"]
+.intro-text
+.intro-text-body {
+  margin: 20px 0 29px;
 }
 
-.container--pr {
-  padding-right: 1.5rem;
+@media only screen and (max-width: 1068px) {
+  .section-hero
+div[data-component-list="HeroComponent"]
+.intro-text
+.intro-text-body {
+    margin: 29px 0 37px;
+  }
 }
 
-.container--pb {
-  padding-bottom: 1.75rem;
+@media only screen and (max-width: 734px) {
+  .section-hero
+div[data-component-list="HeroComponent"]
+.intro-text
+.intro-text-body {
+    margin: 12px 0 27px;
+  }
 }
 
-.container--pl {
-  padding-left: 1.5rem;
-}
-
-.flex {
+.section-hero
+div[data-component-list="HeroComponent"]
+.intro-text
+.cta-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 0;
 }
 
-.flex-jc-sb {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.section-hero
+div[data-component-list="HeroComponent"]
+.intro-text
+.update-link {
+  margin: 20px 0;
 }
 
-.flex-jc-c {
+@media only screen and (max-width: 734px) {
+  .section-hero
+div[data-component-list="HeroComponent"]
+.intro-text
+.update-link {
+    margin: 18px 0;
+  }
+}
+
+.section-hero
+div[data-component-list="HeroComponent"]
+.intro-text
+.second-super {
+  margin-top: 0;
+}
+
+.section-hero
+div[data-component-list="HeroComponent"]
+.intro-text
+.animation-point:focus {
+  outline: none;
+}
+
+.no-hero-fallback.no-chrome
+.section-hero
+div[data-component-list="HeroComponent"]
+.intro-text
+.animation-point {
+  -webkit-transform: translateY(40px);
+  transform: translateY(40px);
+  opacity: 0;
+  -webkit-transition: opacity 1s cubic-bezier(0.33, 1, 0.68, 1), -webkit-transform 1s cubic-bezier(0.33, 1, 0.68, 1);
+  transition: opacity 1s cubic-bezier(0.33, 1, 0.68, 1), -webkit-transform 1s cubic-bezier(0.33, 1, 0.68, 1);
+  transition: opacity 1s cubic-bezier(0.33, 1, 0.68, 1), transform 1s cubic-bezier(0.33, 1, 0.68, 1);
+  transition: opacity 1s cubic-bezier(0.33, 1, 0.68, 1), transform 1s cubic-bezier(0.33, 1, 0.68, 1), -webkit-transform 1s cubic-bezier(0.33, 1, 0.68, 1);
+  will-change: opacity, transform;
+}
+
+.no-hero-fallback.no-chrome
+.section-hero
+div[data-component-list="HeroComponent"]
+.intro-text
+.animation-point.js-show {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.section-sellers {
+  --sellers-sticky-content-min-height: 1480px;
+  --sellers-sticky-wrapper-height: 4520px;
+  --sellers-sticky-wrapper-fallback-min-height: 4210px;
+  --sellers-hardware-initial-y-offset: -90px;
+  --sellers-hardware-initial-scale: 0.7164;
+  --sellers-hardware-fallback-left-offset: -190px;
+  --sellers-hardware-fallback-right-offset: -750px;
+}
+
+@media only screen and (max-width: 1068px) {
+  .section-sellers {
+    --sellers-sticky-content-min-height: 3330px;
+    --sellers-sticky-wrapper-fallback-min-height: 3360px;
+    --sellers-hardware-fallback-left-offset: -105px;
+    --sellers-hardware-fallback-right-offset: -680px;
+    --sellers-static-row-offset-top: -40px;
+    --sellers-static-content-padding: 75px 0;
+    --sellers-static-features-margin-top: -110px;
+    --sellers-static-features-margin-bottom: 88px;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .section-sellers {
+    overflow: hidden;
+    --sellers-hardware-initial-scale: 1;
+    --sellers-hardware-fallback-left-offset: -5px;
+    --sellers-static-row-offset-top: 0;
+    --sellers-static-content-padding: 0 0 100px 0;
+    --sellers-static-features-margin-top: -5px;
+    --sellers-static-features-margin-bottom: 0;
+  }
+}
+
+.section-sellers .section-header-headline,
+.section-sellers .feature-item-headline {
+  color: var(--blue);
+}
+
+.section-sellers .section-header-cta {
+  font-weight: 400;
+}
+
+.section-sellers .section-header-image {
+  display: none;
+}
+
+.section-sellers .hardware-wrapper {
+  width: 100%;
+  pointer-events: none;
+}
+
+.section-sellers .hardware-wrapper.hide {
+  opacity: 0;
+}
+
+@media only screen and (max-width: 1068px) {
+  .section-sellers .hardware-wrapper {
+    display: none;
+  }
+}
+
+.section-sellers .hardware-wrapper.invisible {
+  visibility: hidden !important;
+}
+
+.section-sellers .image-sellers {
+  position: relative;
+  pointer-events: none;
+  will-change: transform;
+  width: 1892px;
+  height: 1084px;
+}
+
+@media only screen and (max-width: 734px) {
+  .section-sellers .image-sellers {
+    position: absolute;
+  }
+  .section-sellers .image-sellers::before {
+    display: none;
+    background-image: none !important;
+  }
+  .section-sellers .image-sellers .glass-hardware {
+    width: 1482px;
+    height: 928px;
+    background-size: 1482px 928px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_dock__dy6du4l9gbma_large.jpg");
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+    -webkit-mask-size: unset !important;
+    mask-size: unset !important;
+  }
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  .section-sellers .image-sellers .glass-hardware {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_dock__dy6du4l9gbma_large_2x.jpg");
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .section-sellers .image-sellers glass-screen {
+    margin-left: 68px !important;
+    margin-top: 16px !important;
+  }
+}
+
+.section-sellers .image-sellers.image-enhanced {
+  opacity: 0;
+}
+
+@media only screen and (max-width: 1068px) {
+  .section-sellers .image-sellers {
+    width: 1496px;
+    height: 856px;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .section-sellers .image-sellers {
+    width: 770px;
+    height: 524px;
+  }
+}
+
+.section-sellers .image-sellers .glass-hardware {
+  width: 1892px;
+  height: 1084px;
+  background-size: 1892px 1084px;
+  background-repeat: no-repeat;
+  background-image: url("/images/saved/hardware_fallback_large.png");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .section-sellers .image-sellers .glass-hardware {
+    background-image: url("/images/saved/hardware_fallback_large_2x.png");
+  }
+}
+
+html.css-mask .section-sellers .image-sellers .glass-hardware {
+  width: 1892px;
+  height: 1084px;
+  background-size: 1892px 1084px;
+  background-repeat: no-repeat;
+  background-image: url("/images/saved/hardware_large.jpg");
+  -webkit-mask-size: 1892px 1084px;
+  mask-size: 1892px 1084px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-image: url("/images/saved/mask_large.svg");
+          mask-image: url("/images/saved/mask_large.svg");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  html.css-mask .section-sellers .image-sellers .glass-hardware {
+    background-image: url("/images/saved/hardware_large_2x.jpg");
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .section-sellers .image-sellers .glass-hardware {
+    width: 1496px;
+    height: 856px;
+    background-size: 1496px 856px;
+    background-repeat: no-repeat;
+    background-image: url("/images/saved/hardware_fallback_medium.png");
+  }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .section-sellers .image-sellers .glass-hardware {
+    background-image: url("/images/saved/hardware_fallback_medium_2x.png");
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  html.css-mask .section-sellers .image-sellers .glass-hardware {
+    width: 1496px;
+    height: 856px;
+    background-size: 1496px 856px;
+    background-repeat: no-repeat;
+    background-image: url("/images/saved/hardware_medium.jpg");
+    -webkit-mask-size: 1496px 856px;
+    mask-size: 1496px 856px;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-image: url("/images/saved/mask_medium.svg");
+            mask-image: url("/images/saved/mask_medium.svg");
+  }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  html.css-mask .section-sellers .image-sellers .glass-hardware {
+    background-image: url("/images/saved/hardware_medium_2x.jpg");
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .section-sellers .image-sellers .glass-hardware {
+    width: 770px;
+    height: 524px;
+    background-size: 770px 524px;
+    background-repeat: no-repeat;
+    background-image: url("/images/saved/hardware_small.jpg");
+  }
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  .section-sellers .image-sellers .glass-hardware {
+    background-image: url("/images/saved/hardware_small_2x.jpg");
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  html.css-mask .section-sellers .image-sellers .glass-hardware {
+    width: 770px;
+    height: 524px;
+    background-size: 770px 524px;
+    background-repeat: no-repeat;
+    background-image: url("/images/saved/hardware_small.jpg");
+    -webkit-mask-size: 770px 524px;
+    mask-size: 770px 524px;
+  }
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  html.css-mask .section-sellers .image-sellers .glass-hardware {
+    background-image: url("/images/saved/hardware_small_2x.jpg");
+  }
+}
+
+.section-sellers .image-sellers glass-screen {
+  z-index: 4;
+  margin-left: 206px;
+  margin-top: 50px;
+}
+
+@media only screen and (max-width: 1068px) {
+  .section-sellers .image-sellers glass-screen {
+    margin-left: 164px;
+    margin-top: 40px;
+  }
+}
+
+.section-sellers .image-sellers::before {
+  width: 2338px;
+  height: 1584px;
+  background-size: 2338px 1584px;
+  background-repeat: no-repeat;
+  background-image: url("/images/saved/shadow_large.jpg");
+  left: -5px;
+  top: -3px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .section-sellers .image-sellers::before {
+    background-image: url("/images/saved/shadow_large_2x.png");
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .section-sellers .image-sellers::before {
+    width: 1846px;
+    height: 1248px;
+    background-size: 1846px 1248px;
+    background-repeat: no-repeat;
+    background-image: url("/images/saved/shadow_medium.png");
+  }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .section-sellers .image-sellers::before {
+    background-image: url("/images/saved/shadow_medium_2x.png");
+  }
+}
+
+.section-sellers .image-sellers .js-hide {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+
+.section-sellers .image-sellers .hide {
+  opacity: 0;
+}
+
+.section-sellers .image-sellers .hide.js-show {
+  opacity: 1;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+
+.section-sellers .image-sellers .apps {
+  width: 1482px;
+  height: 928px;
+  background-size: 1482px 928px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_apps__gartmv6yn3u6_large.jpg");
+  z-index: 6;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .section-sellers .image-sellers .apps {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_apps__gartmv6yn3u6_large_2x.jpg");
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .section-sellers .image-sellers .apps {
+    width: 1170px;
+    height: 732px;
+    background-size: 1170px 732px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_apps__gartmv6yn3u6_medium.jpg");
+  }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .section-sellers .image-sellers .apps {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_apps__gartmv6yn3u6_medium_2x.jpg");
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .section-sellers .image-sellers .apps {
+    width: 488px;
+    height: 306px;
+    background-size: 488px 306px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_apps__gartmv6yn3u6_small.jpg");
+  }
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  .section-sellers .image-sellers .apps {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_apps__gartmv6yn3u6_small_2x.jpg");
+  }
+}
+
+.section-sellers .image-sellers .dock {
+  width: 1482px;
+  height: 928px;
+  background-size: 1482px 928px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_dock__dy6du4l9gbma_large.jpg");
+  z-index: 5;
+  overflow: hidden;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .section-sellers .image-sellers .dock {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_dock__dy6du4l9gbma_large_2x.jpg");
+  }
+}
+
+.section-sellers .image-sellers .dock macos-dock {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(70px);
+  transform: translateX(-50%) translateY(70px);
+  width: 1237px;
+  height: 70px;
+  background-size: 1237px 70px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_dock__d67vyxbmyfiq_large.png");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .section-sellers .image-sellers .dock macos-dock {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_dock__d67vyxbmyfiq_large_2x.png");
+  }
+}
+
+.section-sellers .image-sellers .control-center {
+  width: 1482px;
+  height: 928px;
+  background-size: 1482px 928px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_dock__dy6du4l9gbma_large.jpg");
+  z-index: 4;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .section-sellers .image-sellers .control-center {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_dock__dy6du4l9gbma_large_2x.jpg");
+  }
+}
+
+.section-sellers .image-sellers .control-center.js-gl-enabled canvas {
+  position: absolute;
+  top: 1px;
+  right: 0;
+}
+
+.section-sellers .image-sellers .control-center luma-matte-startframe {
+  position: absolute;
+  top: 1px;
+  right: 0;
+  width: 416px;
+  height: 566px;
+  background-size: 416px 566px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_control_center_startframe__b1tz72tsiohe_large.jpg");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .section-sellers .image-sellers .control-center luma-matte-startframe {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_control_center_startframe__b1tz72tsiohe_large_2x.jpg");
+  }
+}
+
+.section-sellers .image-sellers .control-center luma-matte-endframe {
+  position: absolute;
+  right: 0;
+  width: 416px;
+  height: 566px;
+  background-size: 416px 566px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_control_center_endframe__q16u6g6udb6i_large.png");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .section-sellers .image-sellers .control-center luma-matte-endframe {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_control_center_endframe__q16u6g6udb6i_large_2x.png");
+  }
+}
+
+.section-sellers .image-sellers .notification-center {
+  width: 1482px;
+  height: 928px;
+  background-size: 1482px 928px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_dock__dy6du4l9gbma_large.jpg");
+  z-index: 3;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .section-sellers .image-sellers .notification-center {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_dock__dy6du4l9gbma_large_2x.jpg");
+  }
+}
+
+.section-sellers
+.image-sellers
+.notification-center.js-gl-enabled
+canvas {
+  position: absolute;
+  right: 0;
+}
+
+.section-sellers
+.image-sellers
+.notification-center
+luma-matte-startframe {
+  position: absolute;
+  top: 1px;
+  right: 0;
+  width: 370px;
+  height: 840px;
+  background-size: 370px 840px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_notification_center_startframe__cugyd8o8crgy_large.jpg");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .section-sellers
+.image-sellers
+.notification-center
+luma-matte-startframe {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_notification_center_startframe__cugyd8o8crgy_large_2x.jpg");
+  }
+}
+
+.section-sellers .image-sellers .notification-center luma-matte-endframe {
+  position: absolute;
+  right: 0;
+  width: 370px;
+  height: 840px;
+  background-size: 370px 840px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_notification_center_endframe__fkef05fajaem_large.png");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .section-sellers
+.image-sellers
+.notification-center
+luma-matte-endframe {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_notification_center_endframe__fkef05fajaem_large_2x.png");
+  }
+}
+
+.section-sellers .image-sellers.apps glass-screen {
+  width: 1482px;
+  height: 928px;
+  background-size: 1482px 928px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_apps__gartmv6yn3u6_large.jpg");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .section-sellers .image-sellers.apps glass-screen {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_apps__gartmv6yn3u6_large_2x.jpg");
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .section-sellers .image-sellers.apps glass-screen {
+    width: 1170px;
+    height: 732px;
+    background-size: 1170px 732px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_apps__gartmv6yn3u6_medium.jpg");
+  }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .section-sellers .image-sellers.apps glass-screen {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_apps__gartmv6yn3u6_medium_2x.jpg");
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .section-sellers .image-sellers.apps glass-screen {
+    width: 488px;
+    height: 306px;
+    background-size: 488px 306px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_apps__gartmv6yn3u6_small.jpg");
+  }
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  .section-sellers .image-sellers.apps glass-screen {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_apps__gartmv6yn3u6_small_2x.jpg");
+  }
+}
+
+.section-sellers .image-sellers.dock glass-screen {
+  width: 1482px;
+  height: 928px;
+  background-size: 1482px 928px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_dock_fallback__f50u48xjs9ua_large.jpg");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .section-sellers .image-sellers.dock glass-screen {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_dock_fallback__f50u48xjs9ua_large_2x.jpg");
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .section-sellers .image-sellers.dock glass-screen {
+    width: 1170px;
+    height: 732px;
+    background-size: 1170px 732px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_dock_fallback__f50u48xjs9ua_medium.jpg");
+  }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .section-sellers .image-sellers.dock glass-screen {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_dock_fallback__f50u48xjs9ua_medium_2x.jpg");
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .section-sellers .image-sellers.dock glass-screen {
+    width: 488px;
+    height: 306px;
+    background-size: 488px 306px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_dock_fallback__f50u48xjs9ua_small.jpg");
+  }
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  .section-sellers .image-sellers.dock glass-screen {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_dock_fallback__f50u48xjs9ua_small_2x.jpg");
+  }
+}
+
+.section-sellers .image-sellers.control-center glass-screen {
+  width: 1482px;
+  height: 928px;
+  background-size: 1482px 928px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_control_center_fallback__fq0vi836mo2m_large.jpg");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .section-sellers .image-sellers.control-center glass-screen {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_control_center_fallback__fq0vi836mo2m_large_2x.jpg");
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .section-sellers .image-sellers.control-center glass-screen {
+    width: 1170px;
+    height: 732px;
+    background-size: 1170px 732px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_control_center_fallback__fq0vi836mo2m_medium.jpg");
+  }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .section-sellers .image-sellers.control-center glass-screen {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_control_center_fallback__fq0vi836mo2m_medium_2x.jpg");
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .section-sellers .image-sellers.control-center glass-screen {
+    width: 488px;
+    height: 306px;
+    background-size: 488px 306px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_control_center_fallback__fq0vi836mo2m_small.jpg");
+  }
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  .section-sellers .image-sellers.control-center glass-screen {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_control_center_fallback__fq0vi836mo2m_small_2x.jpg");
+  }
+}
+
+.section-sellers .image-sellers.notification-center glass-screen {
+  width: 1482px;
+  height: 928px;
+  background-size: 1482px 928px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_notification_center_fallback__dtx8wbny2ei6_large.jpg");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .section-sellers .image-sellers.notification-center glass-screen {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_notification_center_fallback__dtx8wbny2ei6_large_2x.jpg");
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .section-sellers .image-sellers.notification-center glass-screen {
+    width: 1170px;
+    height: 732px;
+    background-size: 1170px 732px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_notification_center_fallback__dtx8wbny2ei6_medium.jpg");
+  }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .section-sellers .image-sellers.notification-center glass-screen {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_notification_center_fallback__dtx8wbny2ei6_medium_2x.jpg");
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .section-sellers .image-sellers.notification-center glass-screen {
+    width: 488px;
+    height: 306px;
+    background-size: 488px 306px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_notification_center_fallback__dtx8wbny2ei6_small.jpg");
+  }
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  .section-sellers .image-sellers.notification-center glass-screen {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_notification_center_fallback__dtx8wbny2ei6_small_2x.jpg");
+  }
+}
+
+.section-sellers .sticky-wrapper {
+  height: var(--sellers-sticky-wrapper-height);
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+
+.section-sellers .sticky-wrapper .sticky-content {
+  position: -webkit-sticky;
+  position: sticky;
+  top: var(--r-localnav-height);
+  height: 100vh;
+  min-height: var(--sellers-sticky-content-min-height);
+  overflow: hidden;
+  z-index: 2;
+}
+
+.section-sellers .sticky-wrapper .section-content {
+  z-index: -1;
+}
+
+.section-sellers .sticky-wrapper .section-content.text-transform-wrapper {
+  top: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.section-sellers .sticky-wrapper .section-content .features-wrapper {
+  position: relative;
+  padding-top: 60px;
+  height: 100vh;
+}
+
+.section-sellers .sticky-wrapper .section-content .feature {
+  will-change: transform;
+  position: absolute;
+  top: 40%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 734px) {
+  .section-sellers .sticky-wrapper .section-content .feature {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .section-sellers .sticky-wrapper .section-content .feature .small-order-1 {
+    z-index: 2;
+  }
+}
+
+.section-sellers
+.sticky-wrapper
+.section-content
+.feature
+.feature-content-wrapper {
+  pointer-events: all;
+}
+
+@media only screen and (max-width: 734px) {
+  .section-sellers
+.sticky-wrapper
+.section-content
+.feature
+.feature-content-wrapper {
+    top: 0;
+    margin-top: -18px;
+  }
+}
+
+.section-sellers .sticky-wrapper .section-content .feature:nth-child(2) {
+  top: calc(40% + 200px);
+}
+
+.section-sellers .sticky-wrapper .section-content .feature:nth-child(4) {
+  top: calc(40% + 200px);
+}
+
+.section-sellers .sticky-wrapper .section-content .enhanced-align-right {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-width: 0px;
+  margin-left: 66.66667%;
+}
+
+.section-sellers .sticky-wrapper .section-content .fallback-lockup {
+  display: none;
+}
+
+@media only screen and (max-width: 734px) {
+  .section-sellers .sticky-wrapper .section-content .fallback-lockup {
+    position: relative;
+    height: 438px;
+    -webkit-transform: translateX(var(--sellers-hardware-fallback-left-offset)) scale(var(--sellers-hardware-initial-scale));
+    transform: translateX(var(--sellers-hardware-fallback-left-offset)) scale(var(--sellers-hardware-initial-scale));
+  }
+}
+
+.section-sellers.static .sticky-wrapper {
+  height: auto !important;
+}
+
+.section-sellers.static .sticky-wrapper .sticky-content {
+  position: static;
+  top: 0;
+  height: unset;
+  min-height: var(--sellers-sticky-wrapper-height);
+  padding-top: 60px;
+}
+
+@media only screen and (max-width: 1068px) {
+  .section-sellers.static .sticky-wrapper .sticky-content {
+    min-height: var(--sellers-sticky-content-min-height);
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  §.section-sellers.static .sticky-wrapper .sticky-content {
+    min-height: unset;
+  }
+}
+
+.section-sellers.static .sticky-wrapper .hardware-wrapper {
+  display: none;
+}
+
+.section-sellers.static .sticky-wrapper .text-transform-wrapper {
+  position: static;
+  margin-top: 0;
+}
+
+.section-sellers.static
+.sticky-wrapper
+.text-transform-wrapper
+.features-wrapper {
+  position: static;
+  height: auto;
+  padding-top: 0;
+  margin-top: var(--sellers-static-features-margin-top);
+  margin-bottom: var(--sellers-static-features-margin-bottom);
+}
+
+.section-sellers.static .sticky-wrapper .text-transform-wrapper .feature {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: unset;
+  top: unset;
+  margin-top: var(--sellers-static-row-offset-top);
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.section-sellers.static
+.sticky-wrapper
+.text-transform-wrapper
+.feature
+.feature-content-wrapper {
+  padding: var(--sellers-static-content-padding);
+  opacity: 1 !important;
+}
+
+.section-sellers.static
+.sticky-wrapper
+.text-transform-wrapper
+.enhanced-align-right {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-width: 0px;
+  margin-left: 0;
+}
+
+.section-sellers.static
+.sticky-wrapper
+.text-transform-wrapper
+.fallback-lockup {
+  display: block;
+  -webkit-transform: translateX(var(--sellers-hardware-fallback-left-offset)) scale(var(--sellers-hardware-initial-scale));
+  transform: translateX(var(--sellers-hardware-fallback-left-offset)) scale(var(--sellers-hardware-initial-scale));
+}
+
+.section-sellers.static
+.sticky-wrapper
+.text-transform-wrapper
+.fallback-lockup.align-left {
+  -webkit-transform: translateX(var(--sellers-hardware-fallback-right-offset)) scale(var(--sellers-hardware-initial-scale));
+  transform: translateX(var(--sellers-hardware-fallback-right-offset)) scale(var(--sellers-hardware-initial-scale));
+}
+
+@media only screen and (max-width: 734px) {
+  .section-sellers.static
+.sticky-wrapper
+.text-transform-wrapper
+.fallback-lockup.align-left {
+    position: relative;
+    -webkit-transform: scale(var(--sellers-hardware-initial-scale));
+    transform: scale(var(--sellers-hardware-initial-scale));
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .section-sellers.static
+.sticky-wrapper
+.text-transform-wrapper
+.fallback-lockup.align-left
+.image-sellers {
+    right: -150px;
+  }
+}
+
+html.no-js .section-sellers .sticky-wrapper,
+html.text-zoom .section-sellers .sticky-wrapper,
+html.edge .section-sellers .sticky-wrapper,
+html.fallback .section-sellers .sticky-wrapper {
+  height: auto;
+  display: block;
+}
+
+html.no-js .section-sellers .sticky-wrapper .sticky-content,
+html.text-zoom .section-sellers .sticky-wrapper .sticky-content,
+html.edge .section-sellers .sticky-wrapper .sticky-content,
+html.fallback .section-sellers .sticky-wrapper .sticky-content {
+  top: 0;
+  z-index: 0;
+  height: unset;
+  min-height: var(--sellers-sticky-wrapper-fallback-min-height);
+}
+
+@media only screen and (max-width: 734px) {
+  html.no-js .section-sellers .sticky-wrapper .sticky-content,
+  html.text-zoom .section-sellers .sticky-wrapper .sticky-content,
+  html.edge .section-sellers .sticky-wrapper .sticky-content,
+  html.fallback .section-sellers .sticky-wrapper .sticky-content {
+    min-height: unset;
+  }
+}
+
+html.no-js
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.hardware-wrapper,
+html.text-zoom
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.hardware-wrapper,
+html.edge .section-sellers .sticky-wrapper .sticky-content .hardware-wrapper,
+html.fallback
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.hardware-wrapper {
+  display: none;
+}
+
+html.no-js .section-sellers .sticky-wrapper .sticky-content .section-content,
+html.text-zoom
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content,
+html.edge .section-sellers .sticky-wrapper .sticky-content .section-content,
+html.fallback
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content {
+  position: static;
+}
+
+html.no-js
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.features-wrapper,
+html.text-zoom
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.features-wrapper,
+html.edge
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.features-wrapper,
+html.fallback
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.features-wrapper {
+  height: auto;
+  margin-top: -67px;
+  margin-bottom: 54px;
+}
+
+@media only screen and (max-width: 1068px) {
+  html.no-js
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.features-wrapper,
+  html.text-zoom
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.features-wrapper,
+  html.edge
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.features-wrapper,
+  html.fallback
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.features-wrapper {
+    margin-top: var(--sellers-static-features-margin-top);
+    margin-bottom: var(--sellers-static-features-margin-bottom);
+  }
+}
+
+html.no-js
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.feature,
+html.text-zoom
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.feature,
+html.edge
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.feature,
+html.fallback
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.feature {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: unset;
+  top: unset;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  margin-top: -75px;
+}
+
+@media only screen and (max-width: 1068px) {
+  html.no-js
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.feature,
+  html.text-zoom
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.feature,
+  html.edge
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.feature,
+  html.fallback
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.feature {
+    margin-top: var(--sellers-static-row-offset-top);
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  html.no-js
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.feature,
+  html.text-zoom
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.feature,
+  html.edge
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.feature,
+  html.fallback
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.feature {
+    margin-top: 0;
+  }
+}
+
+html.no-js
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.feature
+.feature-content-wrapper,
+html.text-zoom
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.feature
+.feature-content-wrapper,
+html.edge
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.feature
+.feature-content-wrapper,
+html.fallback
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.feature
+.feature-content-wrapper {
+  padding: 100px 0;
+}
+
+@media only screen and (max-width: 1068px) {
+  html.no-js
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.feature
+.feature-content-wrapper,
+  html.text-zoom
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.feature
+.feature-content-wrapper,
+  html.edge
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.feature
+.feature-content-wrapper,
+  html.fallback
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.feature
+.feature-content-wrapper {
+    padding: var(--sellers-static-content-padding);
+  }
+}
+
+html.no-js.text-zoom
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.feature
+.feature-content-wrapper,
+html.text-zoom
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.feature
+.feature-content-wrapper,
+html.edge.text-zoom
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.feature
+.feature-content-wrapper,
+html.fallback.text-zoom
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.feature
+.feature-content-wrapper {
+  position: relative;
+  z-index: 10;
+}
+
+html.no-js.text-zoom
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.feature
+.feature-content-wrapper
+p,
+html.text-zoom
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.feature
+.feature-content-wrapper
+p,
+html.edge.text-zoom
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.feature
+.feature-content-wrapper
+p,
+html.fallback.text-zoom
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.feature
+.feature-content-wrapper
+p {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+html.no-js
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.feature
+.enhanced-align-right,
+html.text-zoom
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.feature
+.enhanced-align-right,
+html.edge
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.feature
+.enhanced-align-right,
+html.fallback
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.feature
+.enhanced-align-right {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-width: 0px;
+  margin-left: 0;
+}
+
+html.no-js
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.fallback-lockup,
+html.text-zoom
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.fallback-lockup,
+html.edge
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.fallback-lockup,
+html.fallback
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.fallback-lockup {
+  display: block;
+  -webkit-transform: translateX(var(--sellers-hardware-fallback-left-offset)) scale(var(--sellers-hardware-initial-scale));
+  transform: translateX(var(--sellers-hardware-fallback-left-offset)) scale(var(--sellers-hardware-initial-scale));
+}
+
+@media only screen and (max-width: 734px) {
+  html.no-js
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.fallback-lockup,
+  html.text-zoom
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.fallback-lockup,
+  html.edge
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.fallback-lockup,
+  html.fallback
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.fallback-lockup {
+    position: relative;
+    -webkit-transform: translateX(var(--sellers-hardware-fallback-left-offset)) scale(var(--sellers-hardware-initial-scale));
+    transform: translateX(var(--sellers-hardware-fallback-left-offset)) scale(var(--sellers-hardware-initial-scale));
+  }
+}
+
+html.no-js
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.fallback-lockup.align-left,
+html.text-zoom
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.fallback-lockup.align-left,
+html.edge
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.fallback-lockup.align-left,
+html.fallback
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.fallback-lockup.align-left {
+  position: relative;
+  -webkit-transform: translateX(var(--sellers-hardware-fallback-right-offset)) scale(var(--sellers-hardware-initial-scale));
+  transform: translateX(var(--sellers-hardware-fallback-right-offset)) scale(var(--sellers-hardware-initial-scale));
+}
+
+@media only screen and (max-width: 734px) {
+  html.no-js
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.fallback-lockup.align-left,
+  html.text-zoom
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.fallback-lockup.align-left,
+  html.edge
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.fallback-lockup.align-left,
+  html.fallback
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.fallback-lockup.align-left {
+    position: relative;
+    -webkit-transform: scale(var(--sellers-hardware-initial-scale));
+    transform: scale(var(--sellers-hardware-initial-scale));
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  html.no-js
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.fallback-lockup.align-left
+.image-sellers,
+  html.text-zoom
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.fallback-lockup.align-left
+.image-sellers,
+  html.edge
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.fallback-lockup.align-left
+.image-sellers,
+  html.fallback
+.section-sellers
+.sticky-wrapper
+.sticky-content
+.section-content
+.fallback-lockup.align-left
+.image-sellers {
+    right: -150px;
+  }
+}
+
+html.no-js.edge .image-sellers glass-screen,
+html.text-zoom.edge .image-sellers glass-screen,
+html.edge .image-sellers glass-screen,
+html.fallback.edge .image-sellers glass-screen {
+  display: none;
+}
+
+html.no-js.edge .image-sellers.apps .glass-hardware,
+html.text-zoom.edge .image-sellers.apps .glass-hardware,
+html.edge .image-sellers.apps .glass-hardware,
+html.fallback.edge .image-sellers.apps .glass-hardware {
+  width: 1892px;
+  height: 1084px;
+  background-size: 1892px 1084px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_apps_fallback__fqiep5rw8tim_large.jpg");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  html.no-js.edge .image-sellers.apps .glass-hardware,
+  html.text-zoom.edge .image-sellers.apps .glass-hardware,
+  html.edge .image-sellers.apps .glass-hardware,
+  html.fallback.edge .image-sellers.apps .glass-hardware {
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_apps_fallback__fqiep5rw8tim_large_2x.jpg");
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  html.no-js.edge .image-sellers.apps .glass-hardware,
+  html.text-zoom.edge .image-sellers.apps .glass-hardware,
+  html.edge .image-sellers.apps .glass-hardware,
+  html.fallback.edge .image-sellers.apps .glass-hardware {
+    width: 1496px;
+    height: 856px;
+    background-size: 1496px 856px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_apps_fallback__fqiep5rw8tim_medium.jpg");
+  }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  html.no-js.edge .image-sellers.apps .glass-hardware,
+  html.text-zoom.edge .image-sellers.apps .glass-hardware,
+  html.edge .image-sellers.apps .glass-hardware,
+  html.fallback.edge .image-sellers.apps .glass-hardware {
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_apps_fallback__fqiep5rw8tim_medium_2x.jpg");
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  html.no-js.edge .image-sellers.apps .glass-hardware,
+  html.text-zoom.edge .image-sellers.apps .glass-hardware,
+  html.edge .image-sellers.apps .glass-hardware,
+  html.fallback.edge .image-sellers.apps .glass-hardware {
+    width: 770px;
+    height: 524px;
+    background-size: 770px 524px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_apps_fallback__fqiep5rw8tim_small.jpg");
+  }
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  html.no-js.edge .image-sellers.apps .glass-hardware,
+  html.text-zoom.edge .image-sellers.apps .glass-hardware,
+  html.edge .image-sellers.apps .glass-hardware,
+  html.fallback.edge .image-sellers.apps .glass-hardware {
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_apps_fallback__fqiep5rw8tim_small_2x.jpg");
+  }
+}
+
+html.no-js.edge .image-sellers.dock .glass-hardware,
+html.text-zoom.edge .image-sellers.dock .glass-hardware,
+html.edge .image-sellers.dock .glass-hardware,
+html.fallback.edge .image-sellers.dock .glass-hardware {
+  width: 1892px;
+  height: 1084px;
+  background-size: 1892px 1084px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_dock_fallback__s0fduqp1smyy_large.jpg");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  html.no-js.edge .image-sellers.dock .glass-hardware,
+  html.text-zoom.edge .image-sellers.dock .glass-hardware,
+  html.edge .image-sellers.dock .glass-hardware,
+  html.fallback.edge .image-sellers.dock .glass-hardware {
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_dock_fallback__s0fduqp1smyy_large_2x.jpg");
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  html.no-js.edge .image-sellers.dock .glass-hardware,
+  html.text-zoom.edge .image-sellers.dock .glass-hardware,
+  html.edge .image-sellers.dock .glass-hardware,
+  html.fallback.edge .image-sellers.dock .glass-hardware {
+    width: 1496px;
+    height: 856px;
+    background-size: 1496px 856px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_dock_fallback__s0fduqp1smyy_medium.jpg");
+  }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  html.no-js.edge .image-sellers.dock .glass-hardware,
+  html.text-zoom.edge .image-sellers.dock .glass-hardware,
+  html.edge .image-sellers.dock .glass-hardware,
+  html.fallback.edge .image-sellers.dock .glass-hardware {
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_dock_fallback__s0fduqp1smyy_medium_2x.jpg");
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  html.no-js.edge .image-sellers.dock .glass-hardware,
+  html.text-zoom.edge .image-sellers.dock .glass-hardware,
+  html.edge .image-sellers.dock .glass-hardware,
+  html.fallback.edge .image-sellers.dock .glass-hardware {
+    width: 770px;
+    height: 524px;
+    background-size: 770px 524px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_dock_fallback__s0fduqp1smyy_small.jpg");
+  }
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  html.no-js.edge .image-sellers.dock .glass-hardware,
+  html.text-zoom.edge .image-sellers.dock .glass-hardware,
+  html.edge .image-sellers.dock .glass-hardware,
+  html.fallback.edge .image-sellers.dock .glass-hardware {
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_dock_fallback__s0fduqp1smyy_small_2x.jpg");
+  }
+}
+
+html.no-js.edge .image-sellers.control-center .glass-hardware,
+html.text-zoom.edge .image-sellers.control-center .glass-hardware,
+html.edge .image-sellers.control-center .glass-hardware,
+html.fallback.edge .image-sellers.control-center .glass-hardware {
+  width: 1892px;
+  height: 1084px;
+  background-size: 1892px 1084px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_control_center_fallback__ge30dft03xay_large.jpg");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  html.no-js.edge .image-sellers.control-center .glass-hardware,
+  html.text-zoom.edge .image-sellers.control-center .glass-hardware,
+  html.edge .image-sellers.control-center .glass-hardware,
+  html.fallback.edge .image-sellers.control-center .glass-hardware {
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_control_center_fallback__ge30dft03xay_large_2x.jpg");
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  html.no-js.edge .image-sellers.control-center .glass-hardware,
+  html.text-zoom.edge .image-sellers.control-center .glass-hardware,
+  html.edge .image-sellers.control-center .glass-hardware,
+  html.fallback.edge .image-sellers.control-center .glass-hardware {
+    width: 1496px;
+    height: 856px;
+    background-size: 1496px 856px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_control_center_fallback__ge30dft03xay_medium.jpg");
+  }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  html.no-js.edge .image-sellers.control-center .glass-hardware,
+  html.text-zoom.edge .image-sellers.control-center .glass-hardware,
+  html.edge .image-sellers.control-center .glass-hardware,
+  html.fallback.edge .image-sellers.control-center .glass-hardware {
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_control_center_fallback__ge30dft03xay_medium_2x.jpg");
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  html.no-js.edge .image-sellers.control-center .glass-hardware,
+  html.text-zoom.edge .image-sellers.control-center .glass-hardware,
+  html.edge .image-sellers.control-center .glass-hardware,
+  html.fallback.edge .image-sellers.control-center .glass-hardware {
+    width: 770px;
+    height: 524px;
+    background-size: 770px 524px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_control_center_fallback__ge30dft03xay_small.jpg");
+  }
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  html.no-js.edge .image-sellers.control-center .glass-hardware,
+  html.text-zoom.edge .image-sellers.control-center .glass-hardware,
+  html.edge .image-sellers.control-center .glass-hardware,
+  html.fallback.edge .image-sellers.control-center .glass-hardware {
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_control_center_fallback__ge30dft03xay_small_2x.jpg");
+  }
+}
+
+html.no-js.edge .image-sellers.notification-center .glass-hardware,
+html.text-zoom.edge .image-sellers.notification-center .glass-hardware,
+html.edge .image-sellers.notification-center .glass-hardware,
+html.fallback.edge .image-sellers.notification-center .glass-hardware {
+  width: 1892px;
+  height: 1084px;
+  background-size: 1892px 1084px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_notification_center_fallback__er63l2x7rtw2_large.jpg");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  html.no-js.edge .image-sellers.notification-center .glass-hardware,
+  html.text-zoom.edge .image-sellers.notification-center .glass-hardware,
+  html.edge .image-sellers.notification-center .glass-hardware,
+  html.fallback.edge .image-sellers.notification-center .glass-hardware {
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_notification_center_fallback__er63l2x7rtw2_large_2x.jpg");
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  html.no-js.edge .image-sellers.notification-center .glass-hardware,
+  html.text-zoom.edge .image-sellers.notification-center .glass-hardware,
+  html.edge .image-sellers.notification-center .glass-hardware,
+  html.fallback.edge .image-sellers.notification-center .glass-hardware {
+    width: 1496px;
+    height: 856px;
+    background-size: 1496px 856px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_notification_center_fallback__er63l2x7rtw2_medium.jpg");
+  }
+}
+
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 1068px) and (min-resolution: 1.5dppx), only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  html.no-js.edge .image-sellers.notification-center .glass-hardware,
+  html.text-zoom.edge .image-sellers.notification-center .glass-hardware,
+  html.edge .image-sellers.notification-center .glass-hardware,
+  html.fallback.edge .image-sellers.notification-center .glass-hardware {
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_notification_center_fallback__er63l2x7rtw2_medium_2x.jpg");
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  html.no-js.edge .image-sellers.notification-center .glass-hardware,
+  html.text-zoom.edge .image-sellers.notification-center .glass-hardware,
+  html.edge .image-sellers.notification-center .glass-hardware,
+  html.fallback.edge .image-sellers.notification-center .glass-hardware {
+    width: 770px;
+    height: 524px;
+    background-size: 770px 524px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_notification_center_fallback__er63l2x7rtw2_small.jpg");
+  }
+}
+
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 734px) and (min-resolution: 1.5dppx), only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  html.no-js.edge .image-sellers.notification-center .glass-hardware,
+  html.text-zoom.edge .image-sellers.notification-center .glass-hardware,
+  html.edge .image-sellers.notification-center .glass-hardware,
+  html.fallback.edge .image-sellers.notification-center .glass-hardware {
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_notification_center_fallback__er63l2x7rtw2_small_2x.jpg");
+  }
+}
+
+.js .section-sellers {
+  --macos-dock-slide-duration: 0.8s;
+  --macos-dock-easing-function: easeOutQuad;
+  --macos-dock-y-translate: 70px;
+  --feature-slide-duration: 0.8s;
+  --feature-easing-function: easeOutQuad;
+  --feature-y-translate: -200px;
+}
+
+.js .section-sellers .hardware-wrapper .anim-macos-dock {
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: var(--macos-dock-slide-duration);
+  transition-duration: var(--macos-dock-slide-duration);
+  -webkit-transition-timing-function: var(--macos-dock-easing-function);
+  transition-timing-function: var(--macos-dock-easing-function);
+  will-change: opacity, transform;
+  -webkit-transform: translateX(-50%) translateY(--macos-dock-y-translate);
+  transform: translateX(-50%) translateY(--macos-dock-y-translate);
+}
+
+.js .section-sellers .hardware-wrapper .js-macos-dock-transition {
+  -webkit-transform: translateX(-50%) translateY(0);
+  transform: translateX(-50%) translateY(0);
+}
+
+.js .section-sellers .feature .anim-feature-item {
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+  -webkit-transition-duration: var(--feature-slide-duration);
+  transition-duration: var(--feature-slide-duration);
+  -webkit-transition-timing-function: var(--feature-easing-function);
+  transition-timing-function: var(--feature-easing-function);
+  will-change: opacity, transform;
+  opacity: 0;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+@media only screen and (max-width: 1068px) {
+  .js .section-sellers .feature .anim-feature-item {
+    -webkit-transition: none;
+    transition: none;
+    opacity: 1;
+  }
+}
+
+.js .section-sellers .feature .js-feature-item-engaged {
+  opacity: 1;
+}
+
+.js .section-sellers .feature .js-feature-item-transition {
+  -webkit-transform: translateY(var(--feature-y-translate));
+  transform: translateY(var(--feature-y-translate));
+}
+
+.js .section-sellers.static .js-feature-item-transition {
+  -webkit-transition: none;
+  transition: none;
+  -webkit-transform: unset;
+  transform: unset;
+  opacity: 1;
+}
+
+html.no-js .section-sellers .hardware-wrapper .anim-macos-dock,
+html.fallback .section-sellers .hardware-wrapper .anim-macos-dock,
+html.text-zoom .section-sellers .hardware-wrapper .anim-macos-dock,
+html.edge .section-sellers .hardware-wrapper .anim-macos-dock {
+  -webkit-transition: none;
+  transition: none;
+}
+
+html.no-js .section-sellers .feature .anim-feature-item,
+html.fallback .section-sellers .feature .anim-feature-item,
+html.text-zoom .section-sellers .feature .anim-feature-item,
+html.edge .section-sellers .feature .anim-feature-item {
+  -webkit-transition: none;
+  transition: none;
+  opacity: 1;
+}
+
+.glass-container .section-experience .image-experience {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.glass-container::before,
+.section-experience .image-experience::before,
+.glass-container::after,
+.section-experience .image-experience::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.glass-container .glass-hardware,
+.section-experience .image-experience .glass-hardware,
+.glass-container .glass-screen,
+.section-experience .image-experience .glass-screen {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.glass-container .glass-hardware,
+.section-experience .image-experience .glass-hardware {
+  pointer-events: none;
+  z-index: 3;
+}
+
+.glass-container .glass-screen,
+.section-experience .image-experience .glass-screen {
+  z-index: 4;
+}
+
+.justify-content-start {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.justify-content-end {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.justify-content-center {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.flex-ai-c {
+.justify-content-spacebetween {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.justify-content-spacearound {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.justify-content-spaceevenly {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.align-items-start {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.align-items-center {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-button, .button {
-  display: inline-block;
-  padding: 0.875rem 2.1875rem;
-  font-size: 0.875rem;
-  font-weight: 400;
-  background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
-  background: linear-gradient(to right, #31d35c, #2bb7da);
-  border: 0;
-  border-radius: 50px;
-  cursor: pointer;
-  color: white;
-  -webkit-transition: opacity 300ms ease-in-out;
-  transition: opacity 300ms ease-in-out;
+.align-items-end {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
-button:hover, .button:hover {
-  opacity: 0.80;
+.align-self-start {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
-@media (max-width: 63.9375em) {
-  .hide-for-mobile {
-    display: none;
+.align-self-center {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.align-self-end {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.large-justify-content-start {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.large-justify-content-end {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.large-justify-content-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.large-justify-content-spacebetween {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.large-justify-content-spacearound {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.large-justify-content-spaceevenly {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.large-align-items-start {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.large-align-items-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.large-align-items-end {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.large-align-self-start {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.large-align-self-center {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.large-align-self-end {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+@media only screen and (min-width: 1441px) {
+  .xlarge-justify-content-start {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
-}
-
-@media (min-width: 64em) {
-  .hide-for-desktop {
-    display: none;
+  .xlarge-justify-content-end {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
-}
-
-.header nav {
-  position: relative;
-  z-index: 1;
-  background-color: white;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.header__logo img {
-  width: 8.8125rem;
-  height: 1.375rem;
-}
-
-.header__toggle > span {
-  display: block;
-  width: 26px;
-  height: 2px;
-  background-color: #2d314d;
-  -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
-  -webkit-transform-origin: 3px 1px;
-          transform-origin: 3px 1px;
-}
-
-.header__toggle > span:not(:last-child) {
-  margin-bottom: 5px;
-}
-
-.header__menu {
-  position: absolute;
-  z-index: 1;
-  background: white;
-  border-radius: 5px;
-  margin-top: 1.3rem;
-  width: calc(100% - 3rem);
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-.header__menu a {
-  display: block;
-  padding: 0.625rem;
-  color: #2d314d;
-  text-align: center;
-}
-
-.header__menu a:first-child {
-  padding-top: 2rem;
-}
-
-.header__menu a:last-child {
-  padding-bottom: 2rem;
-}
-
-.header__links a {
-  position: relative;
-  font-size: 0.875rem;
-  color: #9698a6;
-  -webkit-transition: color 300ms ease-in-out;
-  transition: color 300ms ease-in-out;
-}
-
-.header__links a:not(:last-child) {
-  margin-right: 2rem;
-}
-
-.header__links a::before {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 5px;
-  left: 0;
-  right: 0;
-  bottom: -30px;
-  background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
-  background: linear-gradient(to right, #31d35c, #2bb7da);
-  opacity: 0;
-  -webkit-transition: opacity 300ms ease-in-out;
-  transition: opacity 300ms ease-in-out;
-}
-
-.header__links a:hover {
-  color: #2d314d;
-}
-
-.header__links a:hover::before {
-  opacity: 1;
-}
-
-.header .overlay {
-  position: fixed;
-  z-index: 1;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#2d314d), to(transparent));
-  background-image: linear-gradient(#2d314d, transparent);
-}
-
-.header.open .header__toggle > span:first-child {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.header.open .header__toggle > span:nth-child(2) {
-  opacity: 0;
-}
-
-.header.open .header__toggle > span:last-child {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-
-.sticky-wrapper {
-  height: 4520px;
-  border-bottom: 1px solid red;
-}
-
-@media (max-width: 87.4375em) {
-  .sticky-content {
-    position: static;
-    height: unset;
-    padding-top: 60px;
-    overflow: hidden;
+  .xlarge-justify-content-center {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-}
-
-@media (min-width: 64em) {
-  .sticky-content {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 52px;
-    height: 100vh;
-    min-height: 1480px;
-    overflow: hidden;
-    z-index: 2;
+  .xlarge-justify-content-spacebetween {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
-}
-
-.hardware-wrapper {
-  display: none;
-  visibility: hidden !important;
-}
-
-@media (max-width: 87.4375em) {
-  .image-sellers .image-hardware {
-    display: block;
-    position: relative;
-    will-change: transform;
-    z-index: 1;
-    width: 1496px;
-    height: 856px;
-    background-size: 1496px 856px;
-    background-repeat: no-repeat;
-    background-image: url("/images/section-hardware-medium.jpg");
-    -webkit-mask-size: 1496px 856px;
-            mask-size: 1496px 856px;
-    -webkit-mask-repeat: no-repeat;
-            mask-repeat: no-repeat;
-    -webkit-mask-image: url("/images/mask-medium.svg");
-            mask-image: url("/images/mask-medium.svg");
+  .xlarge-justify-content-spacearound {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
-  .image-sellers::before {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 1846px;
-    height: 1248px;
-    background-size: 1846px 1248px;
-    background-repeat: no-repeat;
-    background-image: url("/images/shadow.png");
-    z-index: 1;
-    left: -5px;
-    top: -3px;
+  .xlarge-justify-content-spaceevenly {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
-  .image-sellers::after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
+  .xlarge-align-items-start {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
-}
-
-@media (min-width: 64em) {
-  .image-sellers {
-    display: block;
-    z-index: 1;
-    position: relative;
-    will-change: transform;
-    width: 1891px;
-    height: 1084px;
-  }
-  .image-sellers::before {
-    content: '';
-    display: block;
-    position: absolute;
-    z-index: 1;
-    width: 2338px;
-    height: 1584px;
-    background-size: 2338px 1584px;
-    background-repeat: no-repeat;
-    background-image: url("/images/shadow.png");
-    left: -5px;
-    top: -3px;
-  }
-}
-
-.image-hardware {
-  display: block;
-  position: absolute;
-  z-index: 3;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: 1892px 1084px;
-  background-repeat: no-repeat;
-  background-image: url("/images/section-hardware.jpg");
-  -webkit-mask-size: 1892px 1084px;
-          mask-size: 1892px 1084px;
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-image: url("/images/mask.svg");
-          mask-image: url("/images/mask.svg");
-}
-
-.section-sellers {
-  font-size: 18px;
-}
-
-@media (max-width: 87.4375em) {
-  .section-content {
-    margin-left: auto;
-    margin-right: auto;
-    width: 980px;
-  }
-}
-
-@media (min-width: 64em) {
-  .section-content {
-    margin-left: auto;
-    margin-right: auto;
-    width: 980px;
-    z-index: -1;
-  }
-}
-
-.section-header-headline {
-  color: #2a6eff;
-  max-width: 66%;
-  font-size: 64px;
-  line-height: 1.0625;
-  font-weight: 500;
-  letter-spacing: -0.009em;
-}
-
-@media (max-width: 87.4375em) {
-  .text-transform-wrapper {
-    position: static;
-    margin-top: 0;
-  }
-}
-
-@media (min-width: 64em) {
-  .text-transform-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-}
-
-@media (max-width: 87.4375em) {
-  .features-wrapper {
-    position: static;
-    height: auto;
-    padding-top: 0;
-    margin-top: -110px;
-    margin-bottom: 88px;
-  }
-}
-
-@media (min-width: 64em) {
-  .features-wrapper {
-    position: relative;
-    padding-top: 60px;
-    height: 100vh;
-  }
-}
-
-@media (max-width: 87.4375em) {
-  .feature {
+  .xlarge-align-items-center {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-top: -40px;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+  }
+  .xlarge-align-items-end {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .xlarge-align-self-start {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .xlarge-align-self-center {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .xlarge-align-self-end {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
   }
 }
 
-@media (min-width: 64em) {
-  .feature {
-    will-change: transform;
-    position: absolute;
-    top: 40%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    -webkit-transition-property: opacity, -webkit-transform;
-    transition-property: opacity, -webkit-transform;
-    transition-property: opacity, transform;
-    transition-property: opacity, transform, -webkit-transform;
-    -webkit-transition-duration: 0.8s;
-            transition-duration: 0.8s;
+@media only screen and (max-width: 1068px) {
+  .medium-justify-content-start {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
-  .feature:nth-child(2) {
-    top: calc(40% + 200px);
+  .medium-justify-content-end {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
   }
-  .feature:nth-child(4) {
-    top: calc(40% + 200px);
+  .medium-justify-content-center {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .medium-justify-content-spacebetween {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .medium-justify-content-spacearound {
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+  .medium-justify-content-spaceevenly {
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+  }
+  .medium-align-items-start {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+  .medium-align-items-center {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .medium-align-items-end {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  }
+  .medium-align-self-start {
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+  }
+  .medium-align-self-center {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .medium-align-self-end {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
   }
 }
 
-.feature-item-headline {
-  color: #2a6eff;
-}
-
-.anim-feature-item {
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
-  -webkit-transition-property: opacity, -webkit-transform;
-  transition-property: opacity, -webkit-transform;
-  transition-property: opacity, transform;
-  transition-property: opacity, transform, -webkit-transform;
-  -webkit-transition-duration: 0.8s;
-          transition-duration: 0.8s;
-  -webkit-transition-timing-function: easeOutQuad;
-          transition-timing-function: easeOutQuad;
-  will-change: opacity, transform;
-  opacity: 1;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
-
-@media (max-width: 87.4375em) {
-  .fallback-lockup {
-    display: block;
-    -webkit-transform: translateX(-105px) scale(0.7164);
-            transform: translateX(-105px) scale(0.7164);
+@media only screen and (max-width: 734px) {
+  .small-justify-content-start {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+  .small-justify-content-end {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+  .small-justify-content-center {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .small-justify-content-spacebetween {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .small-justify-content-spacearound {
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+  .small-justify-content-spaceevenly {
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+  }
+  .small-align-items-start {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+  .small-align-items-center {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .small-align-items-end {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  }
+  .small-align-self-start {
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+  }
+  .small-align-self-center {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .small-align-self-end {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
   }
 }
 
-@media (min-width: 64em) {
-  .fallback-lockup {
-    display: none;
-  }
+.nowrap {
+  display: inline-block;
+  text-decoration: inherit;
+  white-space: nowrap;
 }
 
-.js-feature-item-engaged {
-  opacity: 1;
+.clear {
+  clear: both;
 }
 
-.js-feature-item-transition {
-  -webkit-transform: translateY(-200px);
-          transform: translateY(-200px);
+.cursor-grab {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 
-.feature-text {
-  font-size: 19px;
-  line-height: 1.4211;
-  font-weight: 600;
-  letter-spacing: 0.012em;
-  max-width: 340px;
-}
-
-.section-header-intro {
-  max-width: 75%;
-  font-size: 24px;
-  line-height: 1.33341;
-  font-weight: 600;
-  letter-spacing: 0.009em;
-  padding: 0;
-}
-
-.text-block {
-  color: black;
-  text-align: center;
+.cursor-grabbing {
+  cursor: move;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
 }
 
 .row {
@@ -629,23 +3674,457 @@ button:hover, .button:hover {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   width: 100%;
+}
+
+.row-reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 .column {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   min-width: 0px;
 }
 
-@media only screen and (max-width: 1020px) {
+.large-offset-0 {
+  margin-left: 0;
+}
+
+.large-order-0 {
+  -webkit-box-ordinal-group: 1;
+  -ms-flex-order: 0;
+  order: 0;
+}
+
+.large-1 {
+  -ms-flex-preferred-size: 8.33333%;
+  flex-basis: 8.33333%;
+  max-width: 8.33333%;
+}
+
+.large-offset-1 {
+  margin-left: 8.33333%;
+}
+
+.large-order-1 {
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+.large-2 {
+  -ms-flex-preferred-size: 16.66667%;
+  flex-basis: 16.66667%;
+  max-width: 16.66667%;
+}
+
+.large-offset-2 {
+  margin-left: 16.66667%;
+}
+
+.large-order-2 {
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
+}
+
+.large-3 {
+  -ms-flex-preferred-size: 25%;
+  flex-basis: 25%;
+  max-width: 25%;
+}
+
+.large-offset-3 {
+  margin-left: 25%;
+}
+
+.large-order-3 {
+  -webkit-box-ordinal-group: 4;
+  -ms-flex-order: 3;
+  order: 3;
+}
+
+.large-4 {
+  -ms-flex-preferred-size: 33.33333%;
+  flex-basis: 33.33333%;
+  max-width: 33.33333%;
+}
+
+.large-offset-4 {
+  margin-left: 33.33333%;
+}
+
+.large-order-4 {
+  -webkit-box-ordinal-group: 5;
+  -ms-flex-order: 4;
+  order: 4;
+}
+
+.large-5 {
+  -ms-flex-preferred-size: 41.66667%;
+  flex-basis: 41.66667%;
+  max-width: 41.66667%;
+}
+
+.large-offset-5 {
+  margin-left: 41.66667%;
+}
+
+.large-order-5 {
+  -webkit-box-ordinal-group: 6;
+  -ms-flex-order: 5;
+  order: 5;
+}
+
+.large-6 {
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.large-offset-6 {
+  margin-left: 50%;
+}
+
+.large-order-6 {
+  -webkit-box-ordinal-group: 7;
+  -ms-flex-order: 6;
+  order: 6;
+}
+
+.large-7 {
+  -ms-flex-preferred-size: 58.33333%;
+  flex-basis: 58.33333%;
+  max-width: 58.33333%;
+}
+
+.large-offset-7 {
+  margin-left: 58.33333%;
+}
+
+.large-order-7 {
+  -webkit-box-ordinal-group: 8;
+  -ms-flex-order: 7;
+  order: 7;
+}
+
+.large-8 {
+  -ms-flex-preferred-size: 66.66667%;
+  flex-basis: 66.66667%;
+  max-width: 66.66667%;
+}
+
+.large-offset-8 {
+  margin-left: 66.66667%;
+}
+
+.large-order-8 {
+  -webkit-box-ordinal-group: 9;
+  -ms-flex-order: 8;
+  order: 8;
+}
+
+.large-9 {
+  -ms-flex-preferred-size: 75%;
+  flex-basis: 75%;
+  max-width: 75%;
+}
+
+.large-offset-9 {
+  margin-left: 75%;
+}
+
+.large-order-9 {
+  -webkit-box-ordinal-group: 10;
+  -ms-flex-order: 9;
+  order: 9;
+}
+
+.large-10 {
+  -ms-flex-preferred-size: 83.33333%;
+  flex-basis: 83.33333%;
+  max-width: 83.33333%;
+}
+
+.large-offset-10 {
+  margin-left: 83.33333%;
+}
+
+.large-order-10 {
+  -webkit-box-ordinal-group: 11;
+  -ms-flex-order: 10;
+  order: 10;
+}
+
+.large-11 {
+  -ms-flex-preferred-size: 91.66667%;
+  flex-basis: 91.66667%;
+  max-width: 91.66667%;
+}
+
+.large-offset-11 {
+  margin-left: 91.66667%;
+}
+
+.large-order-11 {
+  -webkit-box-ordinal-group: 12;
+  -ms-flex-order: 11;
+  order: 11;
+}
+
+.large-12 {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.large-offset-12 {
+  margin-left: 100%;
+}
+
+.large-order-12 {
+  -webkit-box-ordinal-group: 13;
+  -ms-flex-order: 12;
+  order: 12;
+}
+
+.large-centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.large-uncentered {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.large-last {
+  margin-left: auto;
+}
+
+.large-notlast {
+  margin-left: 0;
+}
+
+.large-grow {
+  -webkit-box-flex: 1;
+  -ms-flex: auto;
+  flex: auto;
+  max-width: initial;
+}
+
+.large-ungrow {
+  -webkit-box-flex: initial;
+  -ms-flex: initial;
+  flex: initial;
+  max-width: initial;
+}
+
+@media only screen and (min-width: 1441px) {
+  .xlarge-offset-0 {
+    margin-left: 0;
+  }
+  .xlarge-order-0 {
+    -webkit-box-ordinal-group: 1;
+    -ms-flex-order: 0;
+    order: 0;
+  }
+  .xlarge-1 {
+    -ms-flex-preferred-size: 8.33333%;
+    flex-basis: 8.33333%;
+    max-width: 8.33333%;
+  }
+  .xlarge-offset-1 {
+    margin-left: 8.33333%;
+  }
+  .xlarge-order-1 {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+  .xlarge-2 {
+    -ms-flex-preferred-size: 16.66667%;
+    flex-basis: 16.66667%;
+    max-width: 16.66667%;
+  }
+  .xlarge-offset-2 {
+    margin-left: 16.66667%;
+  }
+  .xlarge-order-2 {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+  .xlarge-3 {
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+  .xlarge-offset-3 {
+    margin-left: 25%;
+  }
+  .xlarge-order-3 {
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3;
+  }
+  .xlarge-4 {
+    -ms-flex-preferred-size: 33.33333%;
+    flex-basis: 33.33333%;
+    max-width: 33.33333%;
+  }
+  .xlarge-offset-4 {
+    margin-left: 33.33333%;
+  }
+  .xlarge-order-4 {
+    -webkit-box-ordinal-group: 5;
+    -ms-flex-order: 4;
+    order: 4;
+  }
+  .xlarge-5 {
+    -ms-flex-preferred-size: 41.66667%;
+    flex-basis: 41.66667%;
+    max-width: 41.66667%;
+  }
+  .xlarge-offset-5 {
+    margin-left: 41.66667%;
+  }
+  .xlarge-order-5 {
+    -webkit-box-ordinal-group: 6;
+    -ms-flex-order: 5;
+    order: 5;
+  }
+  .xlarge-6 {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+  .xlarge-offset-6 {
+    margin-left: 50%;
+  }
+  .xlarge-order-6 {
+    -webkit-box-ordinal-group: 7;
+    -ms-flex-order: 6;
+    order: 6;
+  }
+  .xlarge-7 {
+    -ms-flex-preferred-size: 58.33333%;
+    flex-basis: 58.33333%;
+    max-width: 58.33333%;
+  }
+  .xlarge-offset-7 {
+    margin-left: 58.33333%;
+  }
+  .xlarge-order-7 {
+    -webkit-box-ordinal-group: 8;
+    -ms-flex-order: 7;
+    order: 7;
+  }
+  .xlarge-8 {
+    -ms-flex-preferred-size: 66.66667%;
+    flex-basis: 66.66667%;
+    max-width: 66.66667%;
+  }
+  .xlarge-offset-8 {
+    margin-left: 66.66667%;
+  }
+  .xlarge-order-8 {
+    -webkit-box-ordinal-group: 9;
+    -ms-flex-order: 8;
+    order: 8;
+  }
+  .xlarge-9 {
+    -ms-flex-preferred-size: 75%;
+    flex-basis: 75%;
+    max-width: 75%;
+  }
+  .xlarge-offset-9 {
+    margin-left: 75%;
+  }
+  .xlarge-order-9 {
+    -webkit-box-ordinal-group: 10;
+    -ms-flex-order: 9;
+    order: 9;
+  }
+  .xlarge-10 {
+    -ms-flex-preferred-size: 83.33333%;
+    flex-basis: 83.33333%;
+    max-width: 83.33333%;
+  }
+  .xlarge-offset-10 {
+    margin-left: 83.33333%;
+  }
+  .xlarge-order-10 {
+    -webkit-box-ordinal-group: 11;
+    -ms-flex-order: 10;
+    order: 10;
+  }
+  .xlarge-11 {
+    -ms-flex-preferred-size: 91.66667%;
+    flex-basis: 91.66667%;
+    max-width: 91.66667%;
+  }
+  .xlarge-offset-11 {
+    margin-left: 91.66667%;
+  }
+  .xlarge-order-11 {
+    -webkit-box-ordinal-group: 12;
+    -ms-flex-order: 11;
+    order: 11;
+  }
+  .xlarge-12 {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  .xlarge-offset-12 {
+    margin-left: 100%;
+  }
+  .xlarge-order-12 {
+    -webkit-box-ordinal-group: 13;
+    -ms-flex-order: 12;
+    order: 12;
+  }
+  .xlarge-centered {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .xlarge-uncentered {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .xlarge-last {
+    margin-left: auto;
+  }
+  .xlarge-notlast {
+    margin-left: 0;
+  }
+  .xlarge-grow {
+    -webkit-box-flex: 1;
+    -ms-flex: auto;
+    flex: auto;
+    max-width: initial;
+  }
+  .xlarge-ungrow {
+    -webkit-box-flex: initial;
+    -ms-flex: initial;
+    flex: initial;
+    max-width: initial;
+  }
+}
+
+@media only screen and (max-width: 1068px) {
   .medium-offset-0 {
     margin-left: 0;
   }
@@ -1029,6 +4508,1505 @@ button:hover, .button:hover {
     flex: initial;
     max-width: initial;
   }
+}
+
+.row-reverse .column {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-width: 0px;
+}
+
+.row-reverse .large-offset-0 {
+  margin-right: 0;
+}
+
+.row-reverse .large-offset-1 {
+  margin-right: 8.33333%;
+}
+
+.row-reverse .large-offset-2 {
+  margin-right: 16.66667%;
+}
+
+.row-reverse .large-offset-3 {
+  margin-right: 25%;
+}
+
+.row-reverse .large-offset-4 {
+  margin-right: 33.33333%;
+}
+
+.row-reverse .large-offset-5 {
+  margin-right: 41.66667%;
+}
+
+.row-reverse .large-offset-6 {
+  margin-right: 50%;
+}
+
+.row-reverse .large-offset-7 {
+  margin-right: 58.33333%;
+}
+
+.row-reverse .large-offset-8 {
+  margin-right: 66.66667%;
+}
+
+.row-reverse .large-offset-9 {
+  margin-right: 75%;
+}
+
+.row-reverse .large-offset-10 {
+  margin-right: 83.33333%;
+}
+
+.row-reverse .large-offset-11 {
+  margin-right: 91.66667%;
+}
+
+.row-reverse .large-offset-12 {
+  margin-right: 100%;
+}
+
+.row-reverse .large-last {
+  margin-right: auto;
+}
+
+.row-reverse .large-notlast {
+  margin-right: 0;
+}
+
+@media only screen and (min-width: 1441px) {
+  .row-reverse .xlarge-offset-0 {
+    margin-right: 0;
+  }
+  .row-reverse .xlarge-offset-1 {
+    margin-right: 8.33333%;
+  }
+  .row-reverse .xlarge-offset-2 {
+    margin-right: 16.66667%;
+  }
+  .row-reverse .xlarge-offset-3 {
+    margin-right: 25%;
+  }
+  .row-reverse .xlarge-offset-4 {
+    margin-right: 33.33333%;
+  }
+  .row-reverse .xlarge-offset-5 {
+    margin-right: 41.66667%;
+  }
+  .row-reverse .xlarge-offset-6 {
+    margin-right: 50%;
+  }
+  .row-reverse .xlarge-offset-7 {
+    margin-right: 58.33333%;
+  }
+  .row-reverse .xlarge-offset-8 {
+    margin-right: 66.66667%;
+  }
+  .row-reverse .xlarge-offset-9 {
+    margin-right: 75%;
+  }
+  .row-reverse .xlarge-offset-10 {
+    margin-right: 83.33333%;
+  }
+  .row-reverse .xlarge-offset-11 {
+    margin-right: 91.66667%;
+  }
+  .row-reverse .xlarge-offset-12 {
+    margin-right: 100%;
+  }
+  .row-reverse .xlarge-last {
+    margin-right: auto;
+  }
+  .row-reverse .xlarge-notlast {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .row-reverse .medium-offset-0 {
+    margin-right: 0;
+  }
+  .row-reverse .medium-offset-1 {
+    margin-right: 8.33333%;
+  }
+  .row-reverse .medium-offset-2 {
+    margin-right: 16.66667%;
+  }
+  .row-reverse .medium-offset-3 {
+    margin-right: 25%;
+  }
+  .row-reverse .medium-offset-4 {
+    margin-right: 33.33333%;
+  }
+  .row-reverse .medium-offset-5 {
+    margin-right: 41.66667%;
+  }
+  .row-reverse .medium-offset-6 {
+    margin-right: 50%;
+  }
+  .row-reverse .medium-offset-7 {
+    margin-right: 58.33333%;
+  }
+  .row-reverse .medium-offset-8 {
+    margin-right: 66.66667%;
+  }
+  .row-reverse .medium-offset-9 {
+    margin-right: 75%;
+  }
+  .row-reverse .medium-offset-10 {
+    margin-right: 83.33333%;
+  }
+  .row-reverse .medium-offset-11 {
+    margin-right: 91.66667%;
+  }
+  .row-reverse .medium-offset-12 {
+    margin-right: 100%;
+  }
+  .row-reverse .medium-last {
+    margin-right: auto;
+  }
+  .row-reverse .medium-notlast {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .row-reverse .small-offset-0 {
+    margin-right: 0;
+  }
+  .row-reverse .small-offset-1 {
+    margin-right: 8.33333%;
+  }
+  .row-reverse .small-offset-2 {
+    margin-right: 16.66667%;
+  }
+  .row-reverse .small-offset-3 {
+    margin-right: 25%;
+  }
+  .row-reverse .small-offset-4 {
+    margin-right: 33.33333%;
+  }
+  .row-reverse .small-offset-5 {
+    margin-right: 41.66667%;
+  }
+  .row-reverse .small-offset-6 {
+    margin-right: 50%;
+  }
+  .row-reverse .small-offset-7 {
+    margin-right: 58.33333%;
+  }
+  .row-reverse .small-offset-8 {
+    margin-right: 66.66667%;
+  }
+  .row-reverse .small-offset-9 {
+    margin-right: 75%;
+  }
+  .row-reverse .small-offset-10 {
+    margin-right: 83.33333%;
+  }
+  .row-reverse .small-offset-11 {
+    margin-right: 91.66667%;
+  }
+  .row-reverse .small-offset-12 {
+    margin-right: 100%;
+  }
+  .row-reverse .small-last {
+    margin-right: auto;
+  }
+  .row-reverse .small-notlast {
+    margin-right: 0;
+  }
+}
+
+.large-hide {
+  display: none;
+}
+
+.large-show {
+  display: block;
+}
+
+.large-show-inline {
+  display: inline;
+}
+
+.large-show-inlineblock {
+  display: inline-block;
+}
+
+@media only screen and (min-width: 1441px) {
+  .xlarge-hide {
+    display: none;
+  }
+  .xlarge-show {
+    display: block;
+  }
+  .xlarge-show-inline {
+    display: inline;
+  }
+  .xlarge-show-inlineblock {
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .medium-hide {
+    display: none;
+  }
+  .medium-show {
+    display: block;
+  }
+  .medium-show-inline {
+    display: inline;
+  }
+  .medium-show-inlineblock {
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .small-hide {
+    display: none;
+  }
+  .small-show {
+    display: block;
+  }
+  .small-show-inline {
+    display: inline;
+  }
+  .small-show-inlineblock {
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .typography-headline-super {
+    font-size: 64px;
+    line-height: 1.0625;
+    font-weight: 600;
+    letter-spacing: -0.009em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .typography-headline-super {
+    font-size: 48px;
+    line-height: 1.08349;
+    font-weight: 600;
+    letter-spacing: -0.003em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+.typography-headline-elevated {
+  font-size: 64px;
+  line-height: 1.0625;
+  font-weight: 600;
+  letter-spacing: -0.009em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+@media only screen and (max-width: 1068px) {
+  .typography-headline-elevated {
+    font-size: 48px;
+    line-height: 1.08349;
+    font-weight: 600;
+    letter-spacing: -0.003em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .typography-headline-elevated {
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: 0em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+.typography-headline {
+  font-size: 48px;
+  line-height: 1.08349;
+  font-weight: 600;
+  letter-spacing: -0.003em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+@media only screen and (max-width: 1068px) {
+  .typography-headline {
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: 0em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .typography-headline {
+    font-size: 32px;
+    line-height: 1.125;
+    font-weight: 600;
+    letter-spacing: 0.004em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+.typography-headline-reduced {
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: 0em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+@media only screen and (max-width: 1068px) {
+  .typography-headline-reduced {
+    font-size: 32px;
+    line-height: 1.125;
+    font-weight: 600;
+    letter-spacing: 0.004em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .typography-headline-reduced {
+    font-size: 28px;
+    line-height: 1.14286;
+    font-weight: 600;
+    letter-spacing: 0.007em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+.typography-eyebrow-elevated {
+  font-size: 28px;
+  line-height: 1.14286;
+  font-weight: 600;
+  letter-spacing: 0.007em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+@media only screen and (max-width: 1068px) {
+  .typography-eyebrow-elevated {
+    font-size: 24px;
+    line-height: 1.16667;
+    font-weight: 600;
+    letter-spacing: 0.009em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .typography-eyebrow-elevated {
+    font-size: 21px;
+    line-height: 1.19048;
+    font-weight: 600;
+    letter-spacing: 0.011em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+.typography-eyebrow {
+  font-size: 24px;
+  line-height: 1.16667;
+  font-weight: 600;
+  letter-spacing: 0.009em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+@media only screen and (max-width: 1068px) {
+  .typography-eyebrow {
+    font-size: 21px;
+    line-height: 1.19048;
+    font-weight: 600;
+    letter-spacing: 0.011em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+.typography-eyebrow-reduced {
+  font-size: 21px;
+  line-height: 1.19048;
+  font-weight: 600;
+  letter-spacing: 0.011em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+@media only screen and (max-width: 734px) {
+  .typography-eyebrow-reduced {
+    font-size: 19px;
+    line-height: 1.21053;
+    font-weight: 600;
+    letter-spacing: 0.012em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+.typography-intro-elevated {
+  font-size: 24px;
+  line-height: 1.33341;
+  font-weight: 400;
+  letter-spacing: 0.009em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+@media only screen and (max-width: 1068px) {
+  .typography-intro-elevated {
+    font-size: 21px;
+    line-height: 1.381;
+    font-weight: 400;
+    letter-spacing: 0.011em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+.typography-intro {
+  font-size: 21px;
+  line-height: 1.381;
+  font-weight: 400;
+  letter-spacing: 0.011em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+@media only screen and (max-width: 734px) {
+  .typography-intro {
+    font-size: 19px;
+    line-height: 1.4211;
+    font-weight: 400;
+    letter-spacing: 0.012em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+.typography-tout {
+  font-size: 19px;
+  line-height: 1.21053;
+  font-weight: 600;
+  letter-spacing: 0.012em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+.typography-hero-intro {
+  font-size: 60px;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+@media only screen and (max-width: 1068px) {
+  .typography-hero-intro {
+    font-size: 40px;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .typography-hero-intro {
+    font-size: 28px;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+.typography-hero-headline {
+  font-size: 240px;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+@media only screen and (max-width: 1068px) {
+  .typography-hero-headline {
+    font-size: 180px;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .typography-hero-headline {
+    font-size: 104px;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+.typography-hero-eyebrow {
+  font-size: 28px;
+  line-height: 1.14286;
+  font-weight: 600;
+  letter-spacing: 0.007em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+@media only screen and (max-width: 734px) {
+  .typography-hero-eyebrow {
+    font-size: 21px;
+    line-height: 1.19048;
+    font-weight: 600;
+    letter-spacing: 0.011em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+.typography-hero-copy {
+  font-size: 28px;
+  line-height: 1.28583;
+  font-weight: 400;
+  letter-spacing: 0.007em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+@media only screen and (max-width: 1068px) {
+  .typography-hero-copy {
+    font-size: 24px;
+    line-height: 1.33341;
+    font-weight: 400;
+    letter-spacing: 0.009em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .typography-hero-copy {
+    font-size: 21px;
+    line-height: 1.381;
+    font-weight: 400;
+    letter-spacing: 0.011em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+.typography-section-header-intro {
+  font-size: 24px;
+  line-height: 1.33341;
+  font-weight: 600;
+  letter-spacing: 0.009em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+@media only screen and (max-width: 1068px) {
+  .typography-section-header-intro {
+    font-size: 21px;
+    line-height: 1.381;
+    font-weight: 600;
+    letter-spacing: 0.011em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .typography-section-header-intro {
+    font-size: 19px;
+    line-height: 1.4211;
+    font-weight: 600;
+    letter-spacing: 0.012em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+.typography-subsection-headline {
+  font-size: 21px;
+  line-height: 1.19048;
+  font-weight: 600;
+  letter-spacing: 0.011em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+@media only screen and (max-width: 1068px) {
+  .typography-subsection-headline {
+    font-size: 19px;
+    line-height: 1.21053;
+    font-weight: 600;
+    letter-spacing: 0.012em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+.typography-subsection-copy {
+  font-size: 19px;
+  line-height: 1.4211;
+  font-weight: 600;
+  letter-spacing: 0.012em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+@media only screen and (max-width: 1068px) {
+  .typography-subsection-copy {
+    font-size: 17px;
+    line-height: 1.47059;
+    font-weight: 600;
+    letter-spacing: -0.022em;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+.typography-subsection-callout-lm {
+  font-size: 56px;
+  line-height: 1.07143;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+@media only screen and (max-width: 1068px) {
+  .typography-subsection-callout-lm {
+    font-size: 48px;
+    line-height: 1.08349;
+    font-weight: 600;
+    letter-spacing: -0.003em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .typography-subsection-callout-lm {
+    font-size: 19px;
+    line-height: 1.4211;
+    font-weight: 600;
+    letter-spacing: 0.012em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+.typography-subsection-callout-lm-alt {
+  font-size: 48px;
+  line-height: 1.08349;
+  font-weight: 600;
+  letter-spacing: -0.003em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+@media only screen and (max-width: 1068px) {
+  .typography-subsection-callout-lm-alt {
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: 0em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .typography-subsection-callout-lm-alt {
+    font-size: 19px;
+    line-height: 1.4211;
+    font-weight: 600;
+    letter-spacing: 0.012em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+.typography-subsection-callout-lms {
+  font-size: 56px;
+  line-height: 1.07143;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+@media only screen and (max-width: 1068px) {
+  .typography-subsection-callout-lms {
+    font-size: 48px;
+    line-height: 1.08349;
+    font-weight: 600;
+    letter-spacing: -0.003em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .typography-subsection-callout-lms {
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: 0em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+.typography-subsection-callout-password {
+  font-size: 56px;
+  line-height: 1.07143;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+@media only screen and (max-width: 1068px) {
+  .typography-subsection-callout-password {
+    font-size: 38px;
+    line-height: 1.10538;
+    font-weight: 600;
+    letter-spacing: 0em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+.typography-replay {
+  font-size: 14px;
+  line-height: 1.42859;
+  font-weight: 600;
+  letter-spacing: -0.016em;
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+@media only screen and (max-width: 734px) {
+  .typography-replay {
+    font-size: 17px;
+    line-height: 1.47059;
+    font-weight: 600;
+    letter-spacing: -0.022em;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+.typography-features-rowheader {
+  font-size: 24px;
+  line-height: 1.33341;
+  font-weight: 600;
+  letter-spacing: 0.009em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+@media only screen and (max-width: 1068px) {
+  .typography-features-rowheader {
+    font-size: 21px;
+    line-height: 1.19048;
+    font-weight: 600;
+    letter-spacing: 0.011em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+.typography-feature-headline {
+  font-size: 17px;
+  line-height: 1.47059;
+  font-weight: 600;
+  letter-spacing: -0.022em;
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+.typography-more-headline {
+  font-size: 72px;
+  line-height: 1.05556;
+  font-weight: 600;
+  letter-spacing: -0.012em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+@media only screen and (max-width: 1068px) {
+  .typography-more-headline {
+    font-size: 56px;
+    line-height: 1.07143;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .typography-more-headline {
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: 0em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+.typography-router-copy {
+  font-size: 19px;
+  line-height: 1.4211;
+  font-weight: 400;
+  letter-spacing: 0.012em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+@media only screen and (max-width: 734px) {
+  .typography-router-copy {
+    font-size: 17px;
+    line-height: 1.47059;
+    font-weight: 400;
+    letter-spacing: -0.022em;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+.typography-device-headline {
+  font-size: 21px;
+  line-height: 1.19048;
+  font-weight: 600;
+  letter-spacing: 0.011em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+@media only screen and (max-width: 1068px) {
+  .typography-device-headline {
+    font-size: 19px;
+    line-height: 1.21053;
+    font-weight: 600;
+    letter-spacing: 0.012em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+.typography-device-copy {
+  font-size: 19px;
+  line-height: 1.4211;
+  font-weight: 400;
+  letter-spacing: 0.012em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+@media only screen and (max-width: 1068px) {
+  .typography-device-copy {
+    font-size: 17px;
+    line-height: 1.47059;
+    font-weight: 400;
+    letter-spacing: -0.022em;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .typography-device-copy {
+    font-size: 19px;
+    line-height: 1.4211;
+    font-weight: 400;
+    letter-spacing: 0.012em;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+}
+
+.section-content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 980px;
+}
+
+@media only screen and (min-width: 1441px) {
+  .section-content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 980px;
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .section-content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 692px;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .section-content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 87.5%;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .section-content {
+    max-width: calc(400px + var(--grid-gutter) * 2);
+  }
+}
+
+.section-pad-top {
+  padding-top: 140px;
+}
+
+@media only screen and (max-width: 1068px) {
+  .section-pad-top {
+    padding-top: 125px;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .section-pad-top {
+    padding-top: 100px;
+  }
+}
+
+.section-header-image {
+  margin-top: 65px;
+}
+
+@media only screen and (max-width: 734px) {
+  .section-header-image {
+    margin-top: 54px;
+  }
+}
+
+.has-fade {
+  visibility: hidden;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  -webkit-animation: fade-in 200ms ease-in-out forwards;
+          animation: fade-in 200ms ease-in-out forwards;
+}
+
+@-webkit-keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.fade-out {
+  -webkit-animation: fade-out 200ms ease-in-out forwards;
+          animation: fade-out 200ms ease-in-out forwards;
+}
+
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+main {
+  display: block;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+@media (min-width: 64em) {
+  body {
+    font-size: 1.125rem;
+  }
+}
+
+body.noscroll {
+  overflow: hidden;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+.section {
+  min-height: 100vh;
+  background-color: #f5f5f7;
+}
+
+.section--pall {
+  padding-top: 140px;
+  padding-bottom: 140px;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.section--py {
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+
+.section--px {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.section--pt {
+  padding-top: 140px;
+}
+
+.section--pr {
+  padding-right: 1.5rem;
+}
+
+.section--pb {
+  padding-bottom: 140px;
+}
+
+.section--pl {
+  padding-left: 1.5rem;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.container--pall {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.container--py {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+
+.container--px {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.container--pt {
+  padding-top: 1.75rem;
+}
+
+.container--pr {
+  padding-right: 1.5rem;
+}
+
+.container--pb {
+  padding-bottom: 1.75rem;
+}
+
+.container--pl {
+  padding-left: 1.5rem;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-jc-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-jc-c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-ai-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+button, .button {
+  display: inline-block;
+  padding: 0.875rem 2.1875rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
+  background: linear-gradient(to right, #31d35c, #2bb7da);
+  border: 0;
+  border-radius: 50px;
+  cursor: pointer;
+  color: white;
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+}
+
+button:hover, .button:hover {
+  opacity: 0.80;
+}
+
+@media (max-width: 63.9375em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
+.header nav {
+  position: relative;
+  z-index: 1;
+  background-color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.header__logo img {
+  width: 8.8125rem;
+  height: 1.375rem;
+}
+
+.header__toggle > span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: #2d314d;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  -webkit-transform-origin: 3px 1px;
+          transform-origin: 3px 1px;
+}
+
+.header__toggle > span:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.header__menu {
+  position: absolute;
+  z-index: 1;
+  background: white;
+  border-radius: 5px;
+  margin-top: 1.3rem;
+  width: calc(100% - 3rem);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.header__menu a {
+  display: block;
+  padding: 0.625rem;
+  color: #2d314d;
+  text-align: center;
+}
+
+.header__menu a:first-child {
+  padding-top: 2rem;
+}
+
+.header__menu a:last-child {
+  padding-bottom: 2rem;
+}
+
+.header__links a {
+  position: relative;
+  font-size: 0.875rem;
+  color: #9698a6;
+  -webkit-transition: color 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
+}
+
+.header__links a:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.header__links a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 5px;
+  left: 0;
+  right: 0;
+  bottom: -30px;
+  background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
+  background: linear-gradient(to right, #31d35c, #2bb7da);
+  opacity: 0;
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+}
+
+.header__links a:hover {
+  color: #2d314d;
+}
+
+.header__links a:hover::before {
+  opacity: 1;
+}
+
+.header .overlay {
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#2d314d), to(transparent));
+  background-image: linear-gradient(#2d314d, transparent);
+}
+
+.header.open .header__toggle > span:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header.open .header__toggle > span:nth-child(2) {
+  opacity: 0;
+}
+
+.header.open .header__toggle > span:last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.sticky-wrapper {
+  height: 4520px;
+  border-bottom: 1px solid red;
+}
+
+@media (max-width: 87.4375em) {
+  .sticky-content {
+    position: static;
+    height: unset;
+    padding-top: 60px;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 64em) {
+  .sticky-content {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 52px;
+    height: 100vh;
+    min-height: 1480px;
+    overflow: hidden;
+    z-index: 2;
+  }
+}
+
+/* .hardware-wrapper {
+    display: none;
+    visibility: hidden !important;
+} */
+/* .image-sellers {
+    @include breakpoint-down(large) {
+        
+        .image-hardware {
+            display: block;
+            position: relative;
+            will-change: transform;
+            z-index: 1;
+            width: 1496px;
+            height: 856px;
+            background-size: 1496px 856px;
+            background-repeat: no-repeat;
+            background-image: url("/images/section-hardware-medium.jpg");
+            mask-size: 1496px 856px;
+            mask-repeat: no-repeat;
+            mask-image: url("/images/mask-medium.svg");
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 1846px;
+            height: 1248px;
+            background-size: 1846px 1248px;
+            background-repeat: no-repeat;
+            background-image: url("/images/shadow.png");
+            z-index: 1;
+            left: -5px;
+            top: -3px;
+        }
+
+         &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+    };
+    
+
+    @include breakpoint-up(large) {
+        display: block;
+        z-index: 1;
+        position: relative;
+        will-change: transform;
+        width: 1891px;
+        height: 1084px;
+        
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: 1;
+            width: 2338px;
+            height: 1584px;
+            background-size: 2338px 1584px;
+            background-repeat: no-repeat;
+            background-image: url("/images/shadow.png");
+            left: -5px;
+            top: -3px;
+        }
+    };
+}
+ */
+.section-sellers {
+  font-size: 18px;
+}
+
+.section-header-headline {
+  color: #2a6eff;
+}
+
+@media (max-width: 87.4375em) {
+  .features-wrapper {
+    position: static;
+    height: auto;
+    padding-top: 0;
+    margin-top: -110px;
+    margin-bottom: 88px;
+  }
+}
+
+@media (min-width: 64em) {
+  .features-wrapper {
+    position: relative;
+    padding-top: 60px;
+    height: 100vh;
+  }
+}
+
+@media (max-width: 87.4375em) {
+  .feature {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: -40px;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@media (min-width: 64em) {
+  .feature {
+    will-change: transform;
+    position: absolute;
+    top: 40%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, -webkit-transform;
+    transition-property: opacity, transform;
+    transition-property: opacity, transform, -webkit-transform;
+    -webkit-transition-duration: 0.8s;
+            transition-duration: 0.8s;
+  }
+  .feature:nth-child(2) {
+    top: calc(40% + 200px);
+  }
+  .feature:nth-child(4) {
+    top: calc(40% + 200px);
+  }
+}
+
+.feature-item-headline {
+  color: #2a6eff;
+}
+
+.anim-feature-item {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+  -webkit-transition-timing-function: easeOutQuad;
+          transition-timing-function: easeOutQuad;
+  will-change: opacity, transform;
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+@media (max-width: 87.4375em) {
+  .fallback-lockup {
+    display: block;
+    -webkit-transform: translateX(-105px) scale(0.7164);
+            transform: translateX(-105px) scale(0.7164);
+  }
+}
+
+@media (min-width: 64em) {
+  .fallback-lockup {
+    display: none;
+  }
+}
+
+.js-feature-item-engaged {
+  opacity: 1;
+}
+
+.js-feature-item-transition {
+  -webkit-transform: translateY(-200px);
+          transform: translateY(-200px);
 }
 
 .section-hero {

@@ -1,0 +1,3154 @@
+// Hero Section
+.section-hero {
+  max-width: 100%;
+  height: 275vh;
+  min-height: 3464px;
+  overflow: initial;
+  margin-top: calc(-1 * var(--r-globalnav-height) - var(--r-localnav-height));
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (max-width: 1068px) {
+  .section-hero {
+    min-height: 3220px;
+  }
+}
+@media only screen and (max-width: 734px) {
+  .section-hero {
+    height: auto;
+    min-height: 2402px;
+  }
+}
+.hero-fallback .section-hero {
+  height: auto;
+  min-height: auto;
+}
+.no-chrome .section-hero .title-animation {
+  display: inline-block;
+  will-change: transform;
+  opacity: 0;
+  -webkit-transition: 0.65s ease-in-out transform 0.5s,
+    0.55s ease-in opacity 0.5s;
+  transition: 0.65s ease-in-out transform 0.5s, 0.55s ease-in opacity 0.5s;
+}
+.section-hero .title-animation.title-transform-1 {
+  -webkit-transform: translateX(-40px);
+  transform: translateX(-40px);
+}
+.section-hero .title-animation.title-transform-2 {
+  -webkit-transform: translateX(-20px);
+  transform: translateX(-20px);
+}
+.section-hero .title-animation.title-transform-3 {
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+}
+.section-hero .title-animation.title-transform-4 {
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+}
+.section-hero .title-animation.title-transform-5 {
+  -webkit-transform: translateX(20px);
+  transform: translateX(20px);
+}
+.section-hero .title-animation.title-transform-6 {
+  -webkit-transform: translateX(40px);
+  transform: translateX(40px);
+}
+.section-hero .js-opacity-fade {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.section-hero .js-opacity-fade .title-animation {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1;
+}
+.section-hero .js-opacity-fade .product-intro {
+  -webkit-transform: translateY(0px) !important;
+  transform: translateY(0px) !important;
+}
+.section-hero .js-tranlation {
+  -webkit-transform: translateY(0) !important;
+  transform: translateY(0) !important;
+}
+.no-hero-fallback .section-hero .chrome-block {
+  height: 100vh;
+  position: fixed;
+  min-height: 1138px;
+  width: 100%;
+  z-index: 1;
+  display: block;
+  background: #fff;
+  -webkit-transition: 0.85s linear opacity;
+  transition: 0.85s linear opacity;
+  pointer-events: none;
+}
+.section-hero div[data-component-list="HeroComponent"] {
+  top: 0;
+  width: 100%;
+  background: #2e1d7d;
+  background: -webkit-radial-gradient(circle, #2e1d7d 0%, #050939 80%);
+  background: radial-gradient(circle, #2e1d7d 0%, #050939 80%);
+  will-change: transform;
+}
+.section-hero div[data-component-list="HeroComponent"].visibility-hidden {
+  visibility: hidden !important;
+}
+.no-hero-fallback .section-hero div[data-component-list="HeroComponent"] {
+  position: -webkit-sticky;
+  position: sticky;
+  min-height: 100vh;
+  overflow: hidden;
+}
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback .section-hero div[data-component-list="HeroComponent"] {
+    height: auto;
+  }
+}
+.hero-fallback .section-hero div[data-component-list="HeroComponent"] {
+  overflow: hidden;
+}
+.no-hero-fallback
+  .section-hero
+  div[data-component-list="HeroComponent"]
+  .gradient-block {
+  width: 1528px;
+  height: 1108px;
+  background-size: 1528px 1108px;
+  background-repeat: no-repeat;
+  background-image: url("/images/saved/shadow_large.png");
+  position: relative;
+  left: 50%;
+  margin-left: -764px;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-size: 100px 100px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 1.5dppx),
+  (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .gradient-block {
+    background-image: url("/images/saved/shadow_large_2x.png");
+  }
+}
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .gradient-block {
+    width: 1158px;
+    height: 858px;
+    background-size: 1158px 858px;
+    background-repeat: no-repeat;
+    background-image: url("/images/saved/shadow_medium.png");
+  }
+}
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 1068px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .gradient-block {
+    background-image: url("/images/saved/shadow_medium_2x.png");
+  }
+}
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .gradient-block {
+    width: 492px;
+    height: 366px;
+    background-size: 492px 366px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_hardware_shadow__rfrxndfrhcia_small.png");
+  }
+}
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 734px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .gradient-block {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_hardware_shadow__rfrxndfrhcia_small_2x.png");
+  }
+}
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .gradient-block {
+    left: 50%;
+    margin-left: -579px;
+  }
+}
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .gradient-block {
+    left: 50%;
+    margin-left: -246px;
+  }
+}
+.hero-fallback
+  .section-hero
+  div[data-component-list="HeroComponent"]
+  .hero-hardware {
+  width: 1362px;
+  height: 898px;
+  background-size: 1362px 898px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_fallback__fi60jv86taem_large.png");
+  position: relative;
+  left: 50%;
+  margin-left: -681px;
+  -webkit-transform: unset !important;
+  transform: unset !important;
+  top: 170px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 1.5dppx),
+  (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi) {
+  .hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_fallback__fi60jv86taem_large_2x.png");
+  }
+}
+@media only screen and (max-width: 1068px) {
+  .hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware {
+    width: 1059px;
+    height: 684px;
+    background-size: 1059px 684px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_fallback__fi60jv86taem_medium.png");
+  }
+}
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 1068px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_fallback__fi60jv86taem_medium_2x.png");
+  }
+}
+@media only screen and (max-width: 734px) {
+  .hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware {
+    width: 439px;
+    height: 292px;
+    background-size: 439px 292px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_fallback__fi60jv86taem_small.png");
+  }
+}
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 734px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  .hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_fallback__fi60jv86taem_small_2x.png");
+  }
+}
+@media only screen and (max-width: 1068px) {
+  .hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware {
+    left: 50%;
+    margin-left: -529.5px;
+  }
+}
+@media only screen and (max-width: 734px) {
+  .hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware {
+    left: 50%;
+    margin-left: -219.5px;
+  }
+}
+.hero-fallback
+  .section-hero
+  div[data-component-list="HeroComponent"]
+  .hero-hardware
+  .image-screen-placeholder {
+  display: none !important;
+}
+.no-hero-fallback
+  .section-hero
+  div[data-component-list="HeroComponent"]
+  .hero-hardware {
+  will-change: transform;
+  position: relative;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  margin-top: 0;
+  -webkit-transform-origin: center 88px;
+  transform-origin: center 88px;
+  background-image: -webkit-radial-gradient(
+    center,
+    ellipse,
+    #641544 0%,
+    rgba(0, 0, 0, 0) 67%
+  );
+  background-image: radial-gradient(
+    ellipse at center,
+    #641544 0%,
+    rgba(0, 0, 0, 0) 67%
+  );
+  width: 1362px;
+  height: 898px;
+  position: relative;
+  left: 50%;
+  margin-left: -681px;
+}
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware {
+    width: 1059px;
+    height: 684px;
+  }
+}
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware {
+    width: 549px;
+    height: 365px;
+  }
+}
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware {
+    left: 50%;
+    margin-left: -529.5px;
+  }
+}
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware {
+    left: 50%;
+    margin-left: -274.5px;
+  }
+}
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware {
+    -webkit-transform-origin: center 75px;
+    transform-origin: center 75px;
+  }
+}
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware {
+    -webkit-transform-origin: center 15px;
+    transform-origin: center 15px;
+    width: 439px;
+    height: 292px;
+    left: 50%;
+    margin-left: -219.5px;
+  }
+}
+.no-hero-fallback
+  .section-hero
+  div[data-component-list="HeroComponent"]
+  .hero-hardware:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  width: 1362px;
+  height: 898px;
+  background-size: 1362px 898px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_hardware__b9fsoccpzb6q_large.png");
+  position: relative;
+  left: 50%;
+  margin-left: -681px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 1.5dppx),
+  (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware:before {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_hardware__b9fsoccpzb6q_large_2x.png");
+  }
+}
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware:before {
+    width: 1059px;
+    height: 684px;
+    background-size: 1059px 684px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_hardware__b9fsoccpzb6q_medium.png");
+  }
+}
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 1068px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware:before {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_hardware__b9fsoccpzb6q_medium_2x.png");
+  }
+}
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware:before {
+    width: 549px;
+    height: 365px;
+    background-size: 549px 365px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_hardware__b9fsoccpzb6q_small.png");
+  }
+}
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 734px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware:before {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_hardware__b9fsoccpzb6q_small_2x.png");
+  }
+}
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware:before {
+    left: 50%;
+    margin-left: -529.5px;
+  }
+}
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware:before {
+    left: 50%;
+    margin-left: -274.5px;
+  }
+}
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware:before {
+    background-size: 439px 292px;
+    width: 439px;
+    height: 292px;
+    left: 50%;
+    margin-left: -219.5px;
+  }
+}
+.no-hero-fallback
+  .section-hero
+  div[data-component-list="HeroComponent"]
+  .hero-hardware
+  .screen-placeholder {
+  width: 1720px;
+  height: 1076px;
+  background-size: 1720px 1076px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_desktop__gd4s9ddcapu2_large.jpg");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 1.5dppx),
+  (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .screen-placeholder {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_desktop__gd4s9ddcapu2_large_2x.jpg");
+  }
+}
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .screen-placeholder {
+    width: 1307px;
+    height: 819px;
+    background-size: 1307px 819px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_desktop__gd4s9ddcapu2_medium.jpg");
+  }
+}
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 1068px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .screen-placeholder {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_desktop__gd4s9ddcapu2_medium_2x.jpg");
+  }
+}
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .screen-placeholder {
+    width: 562px;
+    height: 355px;
+    background-size: 562px 355px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_desktop__gd4s9ddcapu2_small.jpg");
+  }
+}
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 734px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .screen-placeholder {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_desktop__gd4s9ddcapu2_small_2x.jpg");
+  }
+}
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .screen-placeholder {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_desktop__gd4s9ddcapu2_small_2x.jpg");
+  }
+}
+.no-hero-fallback
+  .section-hero
+  div[data-component-list="HeroComponent"]
+  .hero-hardware
+  .image-screen-placeholder {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 30px;
+  width: 882px;
+  height: 552px;
+  background-size: 882px 552px;
+  -webkit-transform: perspective(0);
+  transform: perspective(0);
+}
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .image-screen-placeholder {
+    top: 26px;
+    width: 670px;
+    height: 420px;
+    background-size: 670px 420px;
+  }
+}
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .image-screen-placeholder {
+    image-rendering: optimizeQuality;
+    top: 12px;
+    left: 1px;
+    width: 288px;
+    height: 182px;
+    background-size: 288px 182px;
+  }
+}
+.no-hero-fallback
+  .section-hero
+  div[data-component-list="HeroComponent"]
+  .hero-hardware
+  .hero-animation-app {
+  position: absolute;
+  will-change: transform;
+}
+.no-hero-fallback
+  .section-hero
+  div[data-component-list="HeroComponent"]
+  .hero-hardware
+  .hero-animation-app.image-app-maps {
+  width: 768px;
+  height: 461px;
+  background-size: 768px 461px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_map__mt4m02rrevue_large.png");
+  top: -4px;
+  left: 125px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 1.5dppx),
+  (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-maps {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_map__mt4m02rrevue_large_2x.png");
+  }
+}
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-maps {
+    width: 581px;
+    height: 349px;
+    background-size: 581px 349px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_map__mt4m02rrevue_medium.png");
+  }
+}
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 1068px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-maps {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_map__mt4m02rrevue_medium_2x.png");
+  }
+}
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-maps {
+    width: 248px;
+    height: 150px;
+    background-size: 248px 150px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_map__mt4m02rrevue_small.png");
+  }
+}
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 734px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-maps {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_map__mt4m02rrevue_small_2x.png");
+  }
+}
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-maps {
+    top: 1px;
+    left: 110px;
+  }
+}
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-maps {
+    top: 5px;
+    left: 41px;
+  }
+}
+.no-hero-fallback
+  .section-hero
+  div[data-component-list="HeroComponent"]
+  .hero-hardware
+  .hero-animation-app.image-app-messages {
+  width: 594px;
+  height: 425px;
+  background-size: 594px 425px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_bitmap__fu803j37gsii_large.png");
+  top: 178px;
+  left: 216px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 1.5dppx),
+  (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-messages {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_bitmap__fu803j37gsii_large_2x.png");
+  }
+}
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-messages {
+    width: 449px;
+    height: 322px;
+    background-size: 449px 322px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_bitmap__fu803j37gsii_medium.png");
+  }
+}
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 1068px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-messages {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_bitmap__fu803j37gsii_medium_2x.png");
+  }
+}
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-messages {
+    width: 192px;
+    height: 138px;
+    background-size: 192px 138px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_bitmap__fu803j37gsii_small.png");
+  }
+}
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 734px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-messages {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_bitmap__fu803j37gsii_small_2x.png");
+  }
+}
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-messages {
+    top: 141px;
+    left: 176px;
+  }
+}
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-messages {
+    top: 60px;
+    left: 68px;
+  }
+}
+.no-hero-fallback
+  .section-hero
+  div[data-component-list="HeroComponent"]
+  .hero-hardware
+  .hero-animation-app.image-app-safari {
+  width: 803px;
+  height: 589px;
+  background-size: 803px 589px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_safari__bralnc3zflle_large.png");
+  top: 43px;
+  right: 300px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 1.5dppx),
+  (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-safari {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_safari__bralnc3zflle_large_2x.png");
+  }
+}
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-safari {
+    width: 608px;
+    height: 446px;
+    background-size: 608px 446px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_safari__bralnc3zflle_medium.png");
+  }
+}
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 1068px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-safari {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_safari__bralnc3zflle_medium_2x.png");
+  }
+}
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-safari {
+    width: 259px;
+    height: 191px;
+    background-size: 259px 191px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_safari__bralnc3zflle_small.png");
+  }
+}
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 734px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-safari {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_safari__bralnc3zflle_small_2x.png");
+  }
+}
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-safari {
+    top: 30px;
+    right: 243px;
+  }
+}
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-safari {
+    top: 10px;
+    right: 97px;
+  }
+}
+.no-hero-fallback
+  .section-hero
+  div[data-component-list="HeroComponent"]
+  .hero-hardware
+  .hero-animation-app.image-app-notifications {
+  width: 264px;
+  height: 325px;
+  background-size: 264px 325px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_control_center__f3to46jowtqq_large.png");
+  top: -5px;
+  right: 199px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 1.5dppx),
+  (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-notifications {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_control_center__f3to46jowtqq_large_2x.png");
+  }
+}
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-notifications {
+    width: 200px;
+    height: 247px;
+    background-size: 200px 247px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_control_center__f3to46jowtqq_medium.png");
+  }
+}
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 1068px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-notifications {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_control_center__f3to46jowtqq_medium_2x.png");
+  }
+}
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-notifications {
+    width: 85px;
+    height: 106px;
+    background-size: 85px 106px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_control_center__f3to46jowtqq_small.png");
+  }
+}
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 734px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-notifications {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_control_center__f3to46jowtqq_small_2x.png");
+  }
+}
+@media only screen and (min-width: 1069px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-width: 1069px) and (min-resolution: 1.5dppx),
+  only screen and (min-width: 1069px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-notifications {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_control_center__f3to46jowtqq_large.png");
+  }
+}
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-notifications {
+    top: 0;
+    right: 164px;
+  }
+}
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-notifications {
+    right: 63px;
+  }
+}
+.no-hero-fallback
+  .section-hero
+  div[data-component-list="HeroComponent"]
+  .hero-hardware
+  .hero-animation-app.image-app-dock {
+  width: 1105px;
+  height: 63px;
+  background-size: 1105px 63px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_dock__dgoni391o7qu_large.png");
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 319px;
+  -webkit-transform-origin: bottom;
+  transform-origin: bottom;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 1.5dppx),
+  (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-dock {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_dock__dgoni391o7qu_large_2x.png");
+  }
+}
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-dock {
+    width: 836px;
+    height: 48px;
+    background-size: 836px 48px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_dock__dgoni391o7qu_medium.png");
+  }
+}
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 1068px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-dock {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_dock__dgoni391o7qu_medium_2x.png");
+  }
+}
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-dock {
+    width: 356px;
+    height: 22px;
+    background-size: 356px 22px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_dock__dgoni391o7qu_small.png");
+  }
+}
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 734px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-dock {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_dock__dgoni391o7qu_small_2x.png");
+  }
+}
+@media only screen and (min-width: 1069px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-width: 1069px) and (min-resolution: 1.5dppx),
+  only screen and (min-width: 1069px) and (min-resolution: 144dpi) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-dock {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_dock__dgoni391o7qu_large.png");
+  }
+}
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-dock {
+    bottom: 243px;
+  }
+}
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware
+    .hero-animation-app.image-app-dock {
+    bottom: 101px;
+  }
+}
+@media only screen and (min-width: 1069px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-width: 1069px) and (min-resolution: 1.5dppx),
+  only screen and (min-width: 1069px) and (min-resolution: 144dpi) {
+  .no-hero-fallback.chrome
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .hero-hardware:before {
+    background-image: url("/v/macos/big-sur/c/images/overview/hero/hero_hardware__b9fsoccpzb6q_large.png");
+  }
+}
+.section-hero div[data-component-list="HeroComponent"] .intro-text-block {
+  position: absolute;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  z-index: 3;
+  pointer-events: none;
+  height: 100vh;
+}
+.hero-fallback
+  .section-hero
+  div[data-component-list="HeroComponent"]
+  .intro-text-block {
+  display: none;
+}
+.no-hero-fallback.no-chrome
+  .section-hero
+  div[data-component-list="HeroComponent"]
+  .intro-text-block {
+  will-change: opacity;
+  -webkit-transition: 0.9s opacity 0.5s;
+  transition: 0.9s opacity 0.5s;
+  opacity: 0;
+}
+.section-hero
+  div[data-component-list="HeroComponent"]
+  .intro-text-block
+  .product-name,
+.section-hero
+  div[data-component-list="HeroComponent"]
+  .intro-text-block
+  .product-intro {
+  color: #fff;
+  will-change: opacity;
+}
+.section-hero
+  div[data-component-list="HeroComponent"]
+  .intro-text-block
+  .product-name.title,
+.section-hero
+  div[data-component-list="HeroComponent"]
+  .intro-text-block
+  .product-intro.title {
+  margin-top: 0;
+}
+@media only screen and (max-width: 734px) {
+  .section-hero
+    div[data-component-list="HeroComponent"]
+    .intro-text-block
+    .product-name.title,
+  .section-hero
+    div[data-component-list="HeroComponent"]
+    .intro-text-block
+    .product-intro.title {
+    position: relative;
+    left: -3px;
+  }
+}
+.no-chrome
+  .section-hero
+  div[data-component-list="HeroComponent"]
+  .intro-text-block
+  .product-intro {
+  -webkit-transform: translateY(25px);
+  transform: translateY(25px);
+  -webkit-transition: 0.5s linear transform 0.4s;
+  transition: 0.5s linear transform 0.4s;
+}
+.section-hero
+  div[data-component-list="HeroComponent"]
+  .intro-text-block
+  .centered-text-block {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+}
+.section-hero div[data-component-list="HeroComponent"] .intro-text {
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 0 165px;
+  text-align: center;
+}
+@media only screen and (min-width: 1069px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .intro-text {
+    margin-top: -250px;
+  }
+}
+@media only screen and (max-width: 1068px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .intro-text {
+    max-width: 685px;
+    padding: 100px 0;
+    margin-top: -100px;
+  }
+}
+@media only screen and (max-width: 734px) {
+  .no-hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .intro-text {
+    max-width: 435px;
+    padding: 0 30px 110px;
+    margin-top: 0;
+  }
+}
+.hero-fallback
+  .section-hero
+  div[data-component-list="HeroComponent"]
+  .intro-text {
+  position: relative;
+  padding: 100px 0 170px;
+}
+@media only screen and (max-width: 1068px) {
+  .hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .intro-text {
+    padding: 155px 30px 100px;
+  }
+}
+@media only screen and (max-width: 734px) {
+  .hero-fallback
+    .section-hero
+    div[data-component-list="HeroComponent"]
+    .intro-text {
+    padding: 155px 30px 110px;
+  }
+}
+.section-hero
+  div[data-component-list="HeroComponent"]
+  .intro-text
+  .violator-secondary {
+  border-color: #f5f5f7;
+  color: #f5f5f7;
+}
+.section-hero
+  div[data-component-list="HeroComponent"]
+  .intro-text
+  .intro-text-subheader {
+  margin-top: 27px;
+}
+@media only screen and (max-width: 1068px) {
+  .section-hero
+    div[data-component-list="HeroComponent"]
+    .intro-text
+    .intro-text-subheader {
+    margin-top: 8px;
+  }
+}
+.section-hero
+  div[data-component-list="HeroComponent"]
+  .intro-text
+  .intro-text-body {
+  margin: 20px 0 29px;
+}
+@media only screen and (max-width: 1068px) {
+  .section-hero
+    div[data-component-list="HeroComponent"]
+    .intro-text
+    .intro-text-body {
+    margin: 29px 0 37px;
+  }
+}
+@media only screen and (max-width: 734px) {
+  .section-hero
+    div[data-component-list="HeroComponent"]
+    .intro-text
+    .intro-text-body {
+    margin: 12px 0 27px;
+  }
+}
+.section-hero
+  div[data-component-list="HeroComponent"]
+  .intro-text
+  .cta-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 0;
+}
+.section-hero
+  div[data-component-list="HeroComponent"]
+  .intro-text
+  .update-link {
+  margin: 20px 0;
+}
+@media only screen and (max-width: 734px) {
+  .section-hero
+    div[data-component-list="HeroComponent"]
+    .intro-text
+    .update-link {
+    margin: 18px 0;
+  }
+}
+.section-hero
+  div[data-component-list="HeroComponent"]
+  .intro-text
+  .second-super {
+  margin-top: 0;
+}
+.section-hero
+  div[data-component-list="HeroComponent"]
+  .intro-text
+  .animation-point:focus {
+  outline: none;
+}
+.no-hero-fallback.no-chrome
+  .section-hero
+  div[data-component-list="HeroComponent"]
+  .intro-text
+  .animation-point {
+  -webkit-transform: translateY(40px);
+  transform: translateY(40px);
+  opacity: 0;
+  -webkit-transition: opacity 1s cubic-bezier(0.33, 1, 0.68, 1),
+    -webkit-transform 1s cubic-bezier(0.33, 1, 0.68, 1);
+  transition: opacity 1s cubic-bezier(0.33, 1, 0.68, 1),
+    -webkit-transform 1s cubic-bezier(0.33, 1, 0.68, 1);
+  transition: opacity 1s cubic-bezier(0.33, 1, 0.68, 1),
+    transform 1s cubic-bezier(0.33, 1, 0.68, 1);
+  transition: opacity 1s cubic-bezier(0.33, 1, 0.68, 1),
+    transform 1s cubic-bezier(0.33, 1, 0.68, 1),
+    -webkit-transform 1s cubic-bezier(0.33, 1, 0.68, 1);
+  will-change: opacity, transform;
+}
+.no-hero-fallback.no-chrome
+  .section-hero
+  div[data-component-list="HeroComponent"]
+  .intro-text
+  .animation-point.js-show {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+// Section Sellers
+
+.section-sellers {
+  --sellers-sticky-content-min-height: 1480px;
+  --sellers-sticky-wrapper-height: 4520px;
+  --sellers-sticky-wrapper-fallback-min-height: 4210px;
+  --sellers-hardware-initial-y-offset: -90px;
+  --sellers-hardware-initial-scale: 0.7164;
+  --sellers-hardware-fallback-left-offset: -190px;
+  --sellers-hardware-fallback-right-offset: -750px;
+}
+@media only screen and (max-width: 1068px) {
+  .section-sellers {
+    --sellers-sticky-content-min-height: 3330px;
+    --sellers-sticky-wrapper-fallback-min-height: 3360px;
+    --sellers-hardware-fallback-left-offset: -105px;
+    --sellers-hardware-fallback-right-offset: -680px;
+    --sellers-static-row-offset-top: -40px;
+    --sellers-static-content-padding: 75px 0;
+    --sellers-static-features-margin-top: -110px;
+    --sellers-static-features-margin-bottom: 88px;
+  }
+}
+@media only screen and (max-width: 734px) {
+  .section-sellers {
+    overflow: hidden;
+    --sellers-hardware-initial-scale: 1;
+    --sellers-hardware-fallback-left-offset: -5px;
+    --sellers-static-row-offset-top: 0;
+    --sellers-static-content-padding: 0 0 100px 0;
+    --sellers-static-features-margin-top: -5px;
+    --sellers-static-features-margin-bottom: 0;
+  }
+}
+.section-sellers .section-header-headline,
+.section-sellers .feature-item-headline {
+  color: var(--blue);
+}
+.section-sellers .section-header-cta {
+  font-weight: 400;
+}
+.section-sellers .section-header-image {
+  display: none;
+}
+.section-sellers .hardware-wrapper {
+  width: 100%;
+  pointer-events: none;
+}
+.section-sellers .hardware-wrapper.hide {
+  opacity: 0;
+}
+@media only screen and (max-width: 1068px) {
+  .section-sellers .hardware-wrapper {
+    display: none;
+  }
+}
+.section-sellers .hardware-wrapper.invisible {
+  visibility: hidden !important;
+}
+.section-sellers .image-sellers {
+  position: relative;
+  pointer-events: none;
+  will-change: transform;
+  width: 1892px;
+  height: 1084px;
+}
+@media only screen and (max-width: 734px) {
+  .section-sellers .image-sellers {
+    position: absolute;
+  }
+  .section-sellers .image-sellers::before {
+    display: none;
+    background-image: none !important;
+  }
+  .section-sellers .image-sellers .glass-hardware {
+    width: 1482px;
+    height: 928px;
+    background-size: 1482px 928px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_dock__dy6du4l9gbma_large.jpg");
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+    -webkit-mask-size: unset !important;
+    mask-size: unset !important;
+  }
+}
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 734px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  .section-sellers .image-sellers .glass-hardware {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_dock__dy6du4l9gbma_large_2x.jpg");
+  }
+}
+@media only screen and (max-width: 734px) {
+  .section-sellers .image-sellers glass-screen {
+    margin-left: 68px !important;
+    margin-top: 16px !important;
+  }
+}
+.section-sellers .image-sellers.image-enhanced {
+  opacity: 0;
+}
+@media only screen and (max-width: 1068px) {
+  .section-sellers .image-sellers {
+    width: 1496px;
+    height: 856px;
+  }
+}
+@media only screen and (max-width: 734px) {
+  .section-sellers .image-sellers {
+    width: 770px;
+    height: 524px;
+  }
+}
+.section-sellers .image-sellers .glass-hardware {
+  width: 1892px;
+  height: 1084px;
+  background-size: 1892px 1084px;
+  background-repeat: no-repeat;
+  background-image: url("/images/saved/hardware_fallback_large.png");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 1.5dppx),
+  (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi) {
+  .section-sellers .image-sellers .glass-hardware {
+    background-image: url("/images/saved/hardware_fallback_large_2x.png");
+  }
+}
+html.css-mask .section-sellers .image-sellers .glass-hardware {
+  width: 1892px;
+  height: 1084px;
+  background-size: 1892px 1084px;
+  background-repeat: no-repeat;
+  background-image: url("/images/saved/hardware_large.jpg");
+  -webkit-mask-size: 1892px 1084px;
+  mask-size: 1892px 1084px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  mask-image: url("/images/saved/mask_large.svg");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 1.5dppx),
+  (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi) {
+  html.css-mask .section-sellers .image-sellers .glass-hardware {
+    background-image: url("/images/saved/hardware_large_2x.jpg");
+  }
+}
+@media only screen and (max-width: 1068px) {
+  .section-sellers .image-sellers .glass-hardware {
+    width: 1496px;
+    height: 856px;
+    background-size: 1496px 856px;
+    background-repeat: no-repeat;
+    background-image: url("/images/saved/hardware_fallback_medium.png");
+  }
+}
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 1068px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .section-sellers .image-sellers .glass-hardware {
+    background-image: url("/images/saved/hardware_fallback_medium_2x.png");
+  }
+}
+@media only screen and (max-width: 1068px) {
+  html.css-mask .section-sellers .image-sellers .glass-hardware {
+    width: 1496px;
+    height: 856px;
+    background-size: 1496px 856px;
+    background-repeat: no-repeat;
+    background-image: url("/images/saved/hardware_medium.jpg");
+    -webkit-mask-size: 1496px 856px;
+    mask-size: 1496px 856px;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    mask-image: url("/images/saved/mask_medium.svg");
+  }
+}
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 1068px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  html.css-mask .section-sellers .image-sellers .glass-hardware {
+    background-image: url("/images/saved/hardware_medium_2x.jpg");
+  }
+}
+@media only screen and (max-width: 734px) {
+  .section-sellers .image-sellers .glass-hardware {
+    width: 770px;
+    height: 524px;
+    background-size: 770px 524px;
+    background-repeat: no-repeat;
+    background-image: url("/images/saved/hardware_small.jpg");
+  }
+}
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 734px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  .section-sellers .image-sellers .glass-hardware {
+    background-image: url("/images/saved/hardware_small_2x.jpg");
+  }
+}
+@media only screen and (max-width: 734px) {
+  html.css-mask .section-sellers .image-sellers .glass-hardware {
+    width: 770px;
+    height: 524px;
+    background-size: 770px 524px;
+    background-repeat: no-repeat;
+    background-image: url("/images/saved/hardware_small.jpg");
+    -webkit-mask-size: 770px 524px;
+    mask-size: 770px 524px;
+  }
+}
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 734px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  html.css-mask .section-sellers .image-sellers .glass-hardware {
+    background-image: url("/images/saved/hardware_small_2x.jpg");
+  }
+}
+.section-sellers .image-sellers glass-screen {
+  z-index: 4;
+  margin-left: 206px;
+  margin-top: 50px;
+}
+@media only screen and (max-width: 1068px) {
+  .section-sellers .image-sellers glass-screen {
+    margin-left: 164px;
+    margin-top: 40px;
+  }
+}
+.section-sellers .image-sellers::before {
+  width: 2338px;
+  height: 1584px;
+  background-size: 2338px 1584px;
+  background-repeat: no-repeat;
+  background-image: url("/images/saved/shadow_large.jpg");
+  left: -5px;
+  top: -3px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 1.5dppx),
+  (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi) {
+  .section-sellers .image-sellers::before {
+    background-image: url("/images/saved/shadow_large_2x.png");
+  }
+}
+@media only screen and (max-width: 1068px) {
+  .section-sellers .image-sellers::before {
+    width: 1846px;
+    height: 1248px;
+    background-size: 1846px 1248px;
+    background-repeat: no-repeat;
+    background-image: url("/images/saved/shadow_medium.png");
+  }
+}
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 1068px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .section-sellers .image-sellers::before {
+    background-image: url("/images/saved/shadow_medium_2x.png");
+  }
+}
+.section-sellers .image-sellers .js-hide {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+.section-sellers .image-sellers .hide {
+  opacity: 0;
+}
+.section-sellers .image-sellers .hide.js-show {
+  opacity: 1;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+.section-sellers .image-sellers .apps {
+  width: 1482px;
+  height: 928px;
+  background-size: 1482px 928px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_apps__gartmv6yn3u6_large.jpg");
+  z-index: 6;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 1.5dppx),
+  (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi) {
+  .section-sellers .image-sellers .apps {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_apps__gartmv6yn3u6_large_2x.jpg");
+  }
+}
+@media only screen and (max-width: 1068px) {
+  .section-sellers .image-sellers .apps {
+    width: 1170px;
+    height: 732px;
+    background-size: 1170px 732px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_apps__gartmv6yn3u6_medium.jpg");
+  }
+}
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 1068px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .section-sellers .image-sellers .apps {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_apps__gartmv6yn3u6_medium_2x.jpg");
+  }
+}
+@media only screen and (max-width: 734px) {
+  .section-sellers .image-sellers .apps {
+    width: 488px;
+    height: 306px;
+    background-size: 488px 306px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_apps__gartmv6yn3u6_small.jpg");
+  }
+}
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 734px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  .section-sellers .image-sellers .apps {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_apps__gartmv6yn3u6_small_2x.jpg");
+  }
+}
+.section-sellers .image-sellers .dock {
+  width: 1482px;
+  height: 928px;
+  background-size: 1482px 928px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_dock__dy6du4l9gbma_large.jpg");
+  z-index: 5;
+  overflow: hidden;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 1.5dppx),
+  (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi) {
+  .section-sellers .image-sellers .dock {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_dock__dy6du4l9gbma_large_2x.jpg");
+  }
+}
+.section-sellers .image-sellers .dock macos-dock {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(70px);
+  transform: translateX(-50%) translateY(70px);
+  width: 1237px;
+  height: 70px;
+  background-size: 1237px 70px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_dock__d67vyxbmyfiq_large.png");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 1.5dppx),
+  (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi) {
+  .section-sellers .image-sellers .dock macos-dock {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_dock__d67vyxbmyfiq_large_2x.png");
+  }
+}
+.section-sellers .image-sellers .control-center {
+  width: 1482px;
+  height: 928px;
+  background-size: 1482px 928px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_dock__dy6du4l9gbma_large.jpg");
+  z-index: 4;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 1.5dppx),
+  (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi) {
+  .section-sellers .image-sellers .control-center {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_dock__dy6du4l9gbma_large_2x.jpg");
+  }
+}
+.section-sellers .image-sellers .control-center.js-gl-enabled canvas {
+  position: absolute;
+  top: 1px;
+  right: 0;
+}
+.section-sellers .image-sellers .control-center luma-matte-startframe {
+  position: absolute;
+  top: 1px;
+  right: 0;
+  width: 416px;
+  height: 566px;
+  background-size: 416px 566px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_control_center_startframe__b1tz72tsiohe_large.jpg");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 1.5dppx),
+  (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi) {
+  .section-sellers .image-sellers .control-center luma-matte-startframe {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_control_center_startframe__b1tz72tsiohe_large_2x.jpg");
+  }
+}
+.section-sellers .image-sellers .control-center luma-matte-endframe {
+  position: absolute;
+  right: 0;
+  width: 416px;
+  height: 566px;
+  background-size: 416px 566px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_control_center_endframe__q16u6g6udb6i_large.png");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 1.5dppx),
+  (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi) {
+  .section-sellers .image-sellers .control-center luma-matte-endframe {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_control_center_endframe__q16u6g6udb6i_large_2x.png");
+  }
+}
+.section-sellers .image-sellers .notification-center {
+  width: 1482px;
+  height: 928px;
+  background-size: 1482px 928px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_dock__dy6du4l9gbma_large.jpg");
+  z-index: 3;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 1.5dppx),
+  (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi) {
+  .section-sellers .image-sellers .notification-center {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_dock__dy6du4l9gbma_large_2x.jpg");
+  }
+}
+.section-sellers
+  .image-sellers
+  .notification-center.js-gl-enabled
+  canvas {
+  position: absolute;
+  right: 0;
+}
+.section-sellers
+  .image-sellers
+  .notification-center
+  luma-matte-startframe {
+  position: absolute;
+  top: 1px;
+  right: 0;
+  width: 370px;
+  height: 840px;
+  background-size: 370px 840px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_notification_center_startframe__cugyd8o8crgy_large.jpg");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 1.5dppx),
+  (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi) {
+  .section-sellers
+    .image-sellers
+    .notification-center
+    luma-matte-startframe {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_notification_center_startframe__cugyd8o8crgy_large_2x.jpg");
+  }
+}
+.section-sellers .image-sellers .notification-center luma-matte-endframe {
+  position: absolute;
+  right: 0;
+  width: 370px;
+  height: 840px;
+  background-size: 370px 840px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_notification_center_endframe__fkef05fajaem_large.png");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 1.5dppx),
+  (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi) {
+  .section-sellers
+    .image-sellers
+    .notification-center
+    luma-matte-endframe {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_notification_center_endframe__fkef05fajaem_large_2x.png");
+  }
+}
+.section-sellers .image-sellers.apps glass-screen {
+  width: 1482px;
+  height: 928px;
+  background-size: 1482px 928px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_apps__gartmv6yn3u6_large.jpg");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 1.5dppx),
+  (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi) {
+  .section-sellers .image-sellers.apps glass-screen {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_apps__gartmv6yn3u6_large_2x.jpg");
+  }
+}
+@media only screen and (max-width: 1068px) {
+  .section-sellers .image-sellers.apps glass-screen {
+    width: 1170px;
+    height: 732px;
+    background-size: 1170px 732px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_apps__gartmv6yn3u6_medium.jpg");
+  }
+}
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 1068px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .section-sellers .image-sellers.apps glass-screen {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_apps__gartmv6yn3u6_medium_2x.jpg");
+  }
+}
+@media only screen and (max-width: 734px) {
+  .section-sellers .image-sellers.apps glass-screen {
+    width: 488px;
+    height: 306px;
+    background-size: 488px 306px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_apps__gartmv6yn3u6_small.jpg");
+  }
+}
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 734px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  .section-sellers .image-sellers.apps glass-screen {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_apps__gartmv6yn3u6_small_2x.jpg");
+  }
+}
+.section-sellers .image-sellers.dock glass-screen {
+  width: 1482px;
+  height: 928px;
+  background-size: 1482px 928px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_dock_fallback__f50u48xjs9ua_large.jpg");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 1.5dppx),
+  (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi) {
+  .section-sellers .image-sellers.dock glass-screen {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_dock_fallback__f50u48xjs9ua_large_2x.jpg");
+  }
+}
+@media only screen and (max-width: 1068px) {
+  .section-sellers .image-sellers.dock glass-screen {
+    width: 1170px;
+    height: 732px;
+    background-size: 1170px 732px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_dock_fallback__f50u48xjs9ua_medium.jpg");
+  }
+}
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 1068px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .section-sellers .image-sellers.dock glass-screen {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_dock_fallback__f50u48xjs9ua_medium_2x.jpg");
+  }
+}
+@media only screen and (max-width: 734px) {
+  .section-sellers .image-sellers.dock glass-screen {
+    width: 488px;
+    height: 306px;
+    background-size: 488px 306px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_dock_fallback__f50u48xjs9ua_small.jpg");
+  }
+}
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 734px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  .section-sellers .image-sellers.dock glass-screen {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_dock_fallback__f50u48xjs9ua_small_2x.jpg");
+  }
+}
+.section-sellers .image-sellers.control-center glass-screen {
+  width: 1482px;
+  height: 928px;
+  background-size: 1482px 928px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_control_center_fallback__fq0vi836mo2m_large.jpg");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 1.5dppx),
+  (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi) {
+  .section-sellers .image-sellers.control-center glass-screen {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_control_center_fallback__fq0vi836mo2m_large_2x.jpg");
+  }
+}
+@media only screen and (max-width: 1068px) {
+  .section-sellers .image-sellers.control-center glass-screen {
+    width: 1170px;
+    height: 732px;
+    background-size: 1170px 732px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_control_center_fallback__fq0vi836mo2m_medium.jpg");
+  }
+}
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 1068px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .section-sellers .image-sellers.control-center glass-screen {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_control_center_fallback__fq0vi836mo2m_medium_2x.jpg");
+  }
+}
+@media only screen and (max-width: 734px) {
+  .section-sellers .image-sellers.control-center glass-screen {
+    width: 488px;
+    height: 306px;
+    background-size: 488px 306px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_control_center_fallback__fq0vi836mo2m_small.jpg");
+  }
+}
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 734px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  .section-sellers .image-sellers.control-center glass-screen {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_control_center_fallback__fq0vi836mo2m_small_2x.jpg");
+  }
+}
+.section-sellers .image-sellers.notification-center glass-screen {
+  width: 1482px;
+  height: 928px;
+  background-size: 1482px 928px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_notification_center_fallback__dtx8wbny2ei6_large.jpg");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 1.5dppx),
+  (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi) {
+  .section-sellers .image-sellers.notification-center glass-screen {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_notification_center_fallback__dtx8wbny2ei6_large_2x.jpg");
+  }
+}
+@media only screen and (max-width: 1068px) {
+  .section-sellers .image-sellers.notification-center glass-screen {
+    width: 1170px;
+    height: 732px;
+    background-size: 1170px 732px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_notification_center_fallback__dtx8wbny2ei6_medium.jpg");
+  }
+}
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 1068px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  .section-sellers .image-sellers.notification-center glass-screen {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_notification_center_fallback__dtx8wbny2ei6_medium_2x.jpg");
+  }
+}
+@media only screen and (max-width: 734px) {
+  .section-sellers .image-sellers.notification-center glass-screen {
+    width: 488px;
+    height: 306px;
+    background-size: 488px 306px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_notification_center_fallback__dtx8wbny2ei6_small.jpg");
+  }
+}
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 734px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  .section-sellers .image-sellers.notification-center glass-screen {
+    background-image: url("/v/macos/big-sur/c/images/overview/experience/experience_screen_notification_center_fallback__dtx8wbny2ei6_small_2x.jpg");
+  }
+}
+.section-sellers .sticky-wrapper {
+  height: var(--sellers-sticky-wrapper-height);
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+.section-sellers .sticky-wrapper .sticky-content {
+  position: -webkit-sticky;
+  position: sticky;
+  top: var(--r-localnav-height);
+  height: 100vh;
+  min-height: var(--sellers-sticky-content-min-height);
+  overflow: hidden;
+  z-index: 2;
+}
+.section-sellers .sticky-wrapper .section-content {
+  z-index: -1;
+}
+.section-sellers .sticky-wrapper .section-content.text-transform-wrapper {
+  top: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.section-sellers .sticky-wrapper .section-content .features-wrapper {
+  position: relative;
+  padding-top: 60px;
+  height: 100vh;
+}
+.section-sellers .sticky-wrapper .section-content .feature {
+  will-change: transform;
+  position: absolute;
+  top: 40%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+@media only screen and (max-width: 734px) {
+  .section-sellers .sticky-wrapper .section-content .feature {
+    margin-top: 0;
+  }
+}
+@media only screen and (max-width: 734px) {
+  .section-sellers .sticky-wrapper .section-content .feature .small-order-1 {
+    z-index: 2;
+  }
+}
+.section-sellers
+  .sticky-wrapper
+  .section-content
+  .feature
+  .feature-content-wrapper {
+  pointer-events: all;
+}
+@media only screen and (max-width: 734px) {
+  .section-sellers
+    .sticky-wrapper
+    .section-content
+    .feature
+    .feature-content-wrapper {
+    top: 0;
+    margin-top: -18px;
+  }
+}
+.section-sellers .sticky-wrapper .section-content .feature:nth-child(2) {
+  top: calc(40% + 200px);
+}
+.section-sellers .sticky-wrapper .section-content .feature:nth-child(4) {
+  top: calc(40% + 200px);
+}
+.section-sellers .sticky-wrapper .section-content .enhanced-align-right {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-width: 0px;
+  margin-left: 66.66667%;
+}
+.section-sellers .sticky-wrapper .section-content .fallback-lockup {
+  display: none;
+}
+@media only screen and (max-width: 734px) {
+  .section-sellers .sticky-wrapper .section-content .fallback-lockup {
+    position: relative;
+    height: 438px;
+    -webkit-transform: translateX(
+        var(--sellers-hardware-fallback-left-offset)
+      )
+      scale(var(--sellers-hardware-initial-scale));
+    transform: translateX(var(--sellers-hardware-fallback-left-offset))
+      scale(var(--sellers-hardware-initial-scale));
+  }
+}
+.section-sellers.static .sticky-wrapper {
+  height: auto !important;
+}
+.section-sellers.static .sticky-wrapper .sticky-content {
+  position: static;
+  top: 0;
+  height: unset;
+  min-height: var(--sellers-sticky-wrapper-height);
+  padding-top: 60px;
+}
+@media only screen and (max-width: 1068px) {
+  .section-sellers.static .sticky-wrapper .sticky-content {
+    min-height: var(--sellers-sticky-content-min-height);
+  }
+}
+@media only screen and (max-width: 734px) {
+  §.section-sellers.static .sticky-wrapper .sticky-content {
+    min-height: unset;
+  }
+}
+.section-sellers.static .sticky-wrapper .hardware-wrapper {
+  display: none;
+}
+.section-sellers.static .sticky-wrapper .text-transform-wrapper {
+  position: static;
+  margin-top: 0;
+}
+.section-sellers.static
+  .sticky-wrapper
+  .text-transform-wrapper
+  .features-wrapper {
+  position: static;
+  height: auto;
+  padding-top: 0;
+  margin-top: var(--sellers-static-features-margin-top);
+  margin-bottom: var(--sellers-static-features-margin-bottom);
+}
+.section-sellers.static .sticky-wrapper .text-transform-wrapper .feature {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: unset;
+  top: unset;
+  margin-top: var(--sellers-static-row-offset-top);
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.section-sellers.static
+  .sticky-wrapper
+  .text-transform-wrapper
+  .feature
+  .feature-content-wrapper {
+  padding: var(--sellers-static-content-padding);
+  opacity: 1 !important;
+}
+.section-sellers.static
+  .sticky-wrapper
+  .text-transform-wrapper
+  .enhanced-align-right {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-width: 0px;
+  margin-left: 0;
+}
+.section-sellers.static
+  .sticky-wrapper
+  .text-transform-wrapper
+  .fallback-lockup {
+  display: block;
+  -webkit-transform: translateX(var(--sellers-hardware-fallback-left-offset))
+    scale(var(--sellers-hardware-initial-scale));
+  transform: translateX(var(--sellers-hardware-fallback-left-offset))
+    scale(var(--sellers-hardware-initial-scale));
+}
+.section-sellers.static
+  .sticky-wrapper
+  .text-transform-wrapper
+  .fallback-lockup.align-left {
+  -webkit-transform: translateX(
+      var(--sellers-hardware-fallback-right-offset)
+    )
+    scale(var(--sellers-hardware-initial-scale));
+  transform: translateX(var(--sellers-hardware-fallback-right-offset))
+    scale(var(--sellers-hardware-initial-scale));
+}
+@media only screen and (max-width: 734px) {
+  .section-sellers.static
+    .sticky-wrapper
+    .text-transform-wrapper
+    .fallback-lockup.align-left {
+    position: relative;
+    -webkit-transform: scale(var(--sellers-hardware-initial-scale));
+    transform: scale(var(--sellers-hardware-initial-scale));
+  }
+}
+@media only screen and (max-width: 734px) {
+  .section-sellers.static
+    .sticky-wrapper
+    .text-transform-wrapper
+    .fallback-lockup.align-left
+    .image-sellers {
+    right: -150px;
+  }
+}
+html.no-js .section-sellers .sticky-wrapper,
+html.text-zoom .section-sellers .sticky-wrapper,
+html.edge .section-sellers .sticky-wrapper,
+html.fallback .section-sellers .sticky-wrapper {
+  height: auto;
+  display: block;
+}
+html.no-js .section-sellers .sticky-wrapper .sticky-content,
+html.text-zoom .section-sellers .sticky-wrapper .sticky-content,
+html.edge .section-sellers .sticky-wrapper .sticky-content,
+html.fallback .section-sellers .sticky-wrapper .sticky-content {
+  top: 0;
+  z-index: 0;
+  height: unset;
+  min-height: var(--sellers-sticky-wrapper-fallback-min-height);
+}
+@media only screen and (max-width: 734px) {
+  html.no-js .section-sellers .sticky-wrapper .sticky-content,
+  html.text-zoom .section-sellers .sticky-wrapper .sticky-content,
+  html.edge .section-sellers .sticky-wrapper .sticky-content,
+  html.fallback .section-sellers .sticky-wrapper .sticky-content {
+    min-height: unset;
+  }
+}
+html.no-js
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .hardware-wrapper,
+html.text-zoom
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .hardware-wrapper,
+html.edge .section-sellers .sticky-wrapper .sticky-content .hardware-wrapper,
+html.fallback
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .hardware-wrapper {
+  display: none;
+}
+html.no-js .section-sellers .sticky-wrapper .sticky-content .section-content,
+html.text-zoom
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .section-content,
+html.edge .section-sellers .sticky-wrapper .sticky-content .section-content,
+html.fallback
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .section-content {
+  position: static;
+}
+html.no-js
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .section-content
+  .features-wrapper,
+html.text-zoom
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .section-content
+  .features-wrapper,
+html.edge
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .section-content
+  .features-wrapper,
+html.fallback
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .section-content
+  .features-wrapper {
+  height: auto;
+  margin-top: -67px;
+  margin-bottom: 54px;
+}
+@media only screen and (max-width: 1068px) {
+  html.no-js
+    .section-sellers
+    .sticky-wrapper
+    .sticky-content
+    .section-content
+    .features-wrapper,
+  html.text-zoom
+    .section-sellers
+    .sticky-wrapper
+    .sticky-content
+    .section-content
+    .features-wrapper,
+  html.edge
+    .section-sellers
+    .sticky-wrapper
+    .sticky-content
+    .section-content
+    .features-wrapper,
+  html.fallback
+    .section-sellers
+    .sticky-wrapper
+    .sticky-content
+    .section-content
+    .features-wrapper {
+    margin-top: var(--sellers-static-features-margin-top);
+    margin-bottom: var(--sellers-static-features-margin-bottom);
+  }
+}
+html.no-js
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .section-content
+  .feature,
+html.text-zoom
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .section-content
+  .feature,
+html.edge
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .section-content
+  .feature,
+html.fallback
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .section-content
+  .feature {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: unset;
+  top: unset;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  margin-top: -75px;
+}
+@media only screen and (max-width: 1068px) {
+  html.no-js
+    .section-sellers
+    .sticky-wrapper
+    .sticky-content
+    .section-content
+    .feature,
+  html.text-zoom
+    .section-sellers
+    .sticky-wrapper
+    .sticky-content
+    .section-content
+    .feature,
+  html.edge
+    .section-sellers
+    .sticky-wrapper
+    .sticky-content
+    .section-content
+    .feature,
+  html.fallback
+    .section-sellers
+    .sticky-wrapper
+    .sticky-content
+    .section-content
+    .feature {
+    margin-top: var(--sellers-static-row-offset-top);
+  }
+}
+@media only screen and (max-width: 734px) {
+  html.no-js
+    .section-sellers
+    .sticky-wrapper
+    .sticky-content
+    .section-content
+    .feature,
+  html.text-zoom
+    .section-sellers
+    .sticky-wrapper
+    .sticky-content
+    .section-content
+    .feature,
+  html.edge
+    .section-sellers
+    .sticky-wrapper
+    .sticky-content
+    .section-content
+    .feature,
+  html.fallback
+    .section-sellers
+    .sticky-wrapper
+    .sticky-content
+    .section-content
+    .feature {
+    margin-top: 0;
+  }
+}
+html.no-js
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .section-content
+  .feature
+  .feature-content-wrapper,
+html.text-zoom
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .section-content
+  .feature
+  .feature-content-wrapper,
+html.edge
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .section-content
+  .feature
+  .feature-content-wrapper,
+html.fallback
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .section-content
+  .feature
+  .feature-content-wrapper {
+  padding: 100px 0;
+}
+@media only screen and (max-width: 1068px) {
+  html.no-js
+    .section-sellers
+    .sticky-wrapper
+    .sticky-content
+    .section-content
+    .feature
+    .feature-content-wrapper,
+  html.text-zoom
+    .section-sellers
+    .sticky-wrapper
+    .sticky-content
+    .section-content
+    .feature
+    .feature-content-wrapper,
+  html.edge
+    .section-sellers
+    .sticky-wrapper
+    .sticky-content
+    .section-content
+    .feature
+    .feature-content-wrapper,
+  html.fallback
+    .section-sellers
+    .sticky-wrapper
+    .sticky-content
+    .section-content
+    .feature
+    .feature-content-wrapper {
+    padding: var(--sellers-static-content-padding);
+  }
+}
+html.no-js.text-zoom
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .section-content
+  .feature
+  .feature-content-wrapper,
+html.text-zoom
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .section-content
+  .feature
+  .feature-content-wrapper,
+html.edge.text-zoom
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .section-content
+  .feature
+  .feature-content-wrapper,
+html.fallback.text-zoom
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .section-content
+  .feature
+  .feature-content-wrapper {
+  position: relative;
+  z-index: 10;
+}
+html.no-js.text-zoom
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .section-content
+  .feature
+  .feature-content-wrapper
+  p,
+html.text-zoom
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .section-content
+  .feature
+  .feature-content-wrapper
+  p,
+html.edge.text-zoom
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .section-content
+  .feature
+  .feature-content-wrapper
+  p,
+html.fallback.text-zoom
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .section-content
+  .feature
+  .feature-content-wrapper
+  p {
+  background: rgba(255, 255, 255, 0.8);
+}
+html.no-js
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .section-content
+  .feature
+  .enhanced-align-right,
+html.text-zoom
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .section-content
+  .feature
+  .enhanced-align-right,
+html.edge
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .section-content
+  .feature
+  .enhanced-align-right,
+html.fallback
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .section-content
+  .feature
+  .enhanced-align-right {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-width: 0px;
+  margin-left: 0;
+}
+html.no-js
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .section-content
+  .fallback-lockup,
+html.text-zoom
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .section-content
+  .fallback-lockup,
+html.edge
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .section-content
+  .fallback-lockup,
+html.fallback
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .section-content
+  .fallback-lockup {
+  display: block;
+  -webkit-transform: translateX(var(--sellers-hardware-fallback-left-offset))
+    scale(var(--sellers-hardware-initial-scale));
+  transform: translateX(var(--sellers-hardware-fallback-left-offset))
+    scale(var(--sellers-hardware-initial-scale));
+}
+@media only screen and (max-width: 734px) {
+  html.no-js
+    .section-sellers
+    .sticky-wrapper
+    .sticky-content
+    .section-content
+    .fallback-lockup,
+  html.text-zoom
+    .section-sellers
+    .sticky-wrapper
+    .sticky-content
+    .section-content
+    .fallback-lockup,
+  html.edge
+    .section-sellers
+    .sticky-wrapper
+    .sticky-content
+    .section-content
+    .fallback-lockup,
+  html.fallback
+    .section-sellers
+    .sticky-wrapper
+    .sticky-content
+    .section-content
+    .fallback-lockup {
+    position: relative;
+    -webkit-transform: translateX(
+        var(--sellers-hardware-fallback-left-offset)
+      )
+      scale(var(--sellers-hardware-initial-scale));
+    transform: translateX(var(--sellers-hardware-fallback-left-offset))
+      scale(var(--sellers-hardware-initial-scale));
+  }
+}
+html.no-js
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .section-content
+  .fallback-lockup.align-left,
+html.text-zoom
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .section-content
+  .fallback-lockup.align-left,
+html.edge
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .section-content
+  .fallback-lockup.align-left,
+html.fallback
+  .section-sellers
+  .sticky-wrapper
+  .sticky-content
+  .section-content
+  .fallback-lockup.align-left {
+  position: relative;
+  -webkit-transform: translateX(
+      var(--sellers-hardware-fallback-right-offset)
+    )
+    scale(var(--sellers-hardware-initial-scale));
+  transform: translateX(var(--sellers-hardware-fallback-right-offset))
+    scale(var(--sellers-hardware-initial-scale));
+}
+@media only screen and (max-width: 734px) {
+  html.no-js
+    .section-sellers
+    .sticky-wrapper
+    .sticky-content
+    .section-content
+    .fallback-lockup.align-left,
+  html.text-zoom
+    .section-sellers
+    .sticky-wrapper
+    .sticky-content
+    .section-content
+    .fallback-lockup.align-left,
+  html.edge
+    .section-sellers
+    .sticky-wrapper
+    .sticky-content
+    .section-content
+    .fallback-lockup.align-left,
+  html.fallback
+    .section-sellers
+    .sticky-wrapper
+    .sticky-content
+    .section-content
+    .fallback-lockup.align-left {
+    position: relative;
+    -webkit-transform: scale(var(--sellers-hardware-initial-scale));
+    transform: scale(var(--sellers-hardware-initial-scale));
+  }
+}
+@media only screen and (max-width: 734px) {
+  html.no-js
+    .section-sellers
+    .sticky-wrapper
+    .sticky-content
+    .section-content
+    .fallback-lockup.align-left
+    .image-sellers,
+  html.text-zoom
+    .section-sellers
+    .sticky-wrapper
+    .sticky-content
+    .section-content
+    .fallback-lockup.align-left
+    .image-sellers,
+  html.edge
+    .section-sellers
+    .sticky-wrapper
+    .sticky-content
+    .section-content
+    .fallback-lockup.align-left
+    .image-sellers,
+  html.fallback
+    .section-sellers
+    .sticky-wrapper
+    .sticky-content
+    .section-content
+    .fallback-lockup.align-left
+    .image-sellers {
+    right: -150px;
+  }
+}
+html.no-js.edge .image-sellers glass-screen,
+html.text-zoom.edge .image-sellers glass-screen,
+html.edge .image-sellers glass-screen,
+html.fallback.edge .image-sellers glass-screen {
+  display: none;
+}
+html.no-js.edge .image-sellers.apps .glass-hardware,
+html.text-zoom.edge .image-sellers.apps .glass-hardware,
+html.edge .image-sellers.apps .glass-hardware,
+html.fallback.edge .image-sellers.apps .glass-hardware {
+  width: 1892px;
+  height: 1084px;
+  background-size: 1892px 1084px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_apps_fallback__fqiep5rw8tim_large.jpg");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 1.5dppx),
+  (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi) {
+  html.no-js.edge .image-sellers.apps .glass-hardware,
+  html.text-zoom.edge .image-sellers.apps .glass-hardware,
+  html.edge .image-sellers.apps .glass-hardware,
+  html.fallback.edge .image-sellers.apps .glass-hardware {
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_apps_fallback__fqiep5rw8tim_large_2x.jpg");
+  }
+}
+@media only screen and (max-width: 1068px) {
+  html.no-js.edge .image-sellers.apps .glass-hardware,
+  html.text-zoom.edge .image-sellers.apps .glass-hardware,
+  html.edge .image-sellers.apps .glass-hardware,
+  html.fallback.edge .image-sellers.apps .glass-hardware {
+    width: 1496px;
+    height: 856px;
+    background-size: 1496px 856px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_apps_fallback__fqiep5rw8tim_medium.jpg");
+  }
+}
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 1068px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  html.no-js.edge .image-sellers.apps .glass-hardware,
+  html.text-zoom.edge .image-sellers.apps .glass-hardware,
+  html.edge .image-sellers.apps .glass-hardware,
+  html.fallback.edge .image-sellers.apps .glass-hardware {
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_apps_fallback__fqiep5rw8tim_medium_2x.jpg");
+  }
+}
+@media only screen and (max-width: 734px) {
+  html.no-js.edge .image-sellers.apps .glass-hardware,
+  html.text-zoom.edge .image-sellers.apps .glass-hardware,
+  html.edge .image-sellers.apps .glass-hardware,
+  html.fallback.edge .image-sellers.apps .glass-hardware {
+    width: 770px;
+    height: 524px;
+    background-size: 770px 524px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_apps_fallback__fqiep5rw8tim_small.jpg");
+  }
+}
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 734px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  html.no-js.edge .image-sellers.apps .glass-hardware,
+  html.text-zoom.edge .image-sellers.apps .glass-hardware,
+  html.edge .image-sellers.apps .glass-hardware,
+  html.fallback.edge .image-sellers.apps .glass-hardware {
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_apps_fallback__fqiep5rw8tim_small_2x.jpg");
+  }
+}
+html.no-js.edge .image-sellers.dock .glass-hardware,
+html.text-zoom.edge .image-sellers.dock .glass-hardware,
+html.edge .image-sellers.dock .glass-hardware,
+html.fallback.edge .image-sellers.dock .glass-hardware {
+  width: 1892px;
+  height: 1084px;
+  background-size: 1892px 1084px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_dock_fallback__s0fduqp1smyy_large.jpg");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 1.5dppx),
+  (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi) {
+  html.no-js.edge .image-sellers.dock .glass-hardware,
+  html.text-zoom.edge .image-sellers.dock .glass-hardware,
+  html.edge .image-sellers.dock .glass-hardware,
+  html.fallback.edge .image-sellers.dock .glass-hardware {
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_dock_fallback__s0fduqp1smyy_large_2x.jpg");
+  }
+}
+@media only screen and (max-width: 1068px) {
+  html.no-js.edge .image-sellers.dock .glass-hardware,
+  html.text-zoom.edge .image-sellers.dock .glass-hardware,
+  html.edge .image-sellers.dock .glass-hardware,
+  html.fallback.edge .image-sellers.dock .glass-hardware {
+    width: 1496px;
+    height: 856px;
+    background-size: 1496px 856px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_dock_fallback__s0fduqp1smyy_medium.jpg");
+  }
+}
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 1068px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  html.no-js.edge .image-sellers.dock .glass-hardware,
+  html.text-zoom.edge .image-sellers.dock .glass-hardware,
+  html.edge .image-sellers.dock .glass-hardware,
+  html.fallback.edge .image-sellers.dock .glass-hardware {
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_dock_fallback__s0fduqp1smyy_medium_2x.jpg");
+  }
+}
+@media only screen and (max-width: 734px) {
+  html.no-js.edge .image-sellers.dock .glass-hardware,
+  html.text-zoom.edge .image-sellers.dock .glass-hardware,
+  html.edge .image-sellers.dock .glass-hardware,
+  html.fallback.edge .image-sellers.dock .glass-hardware {
+    width: 770px;
+    height: 524px;
+    background-size: 770px 524px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_dock_fallback__s0fduqp1smyy_small.jpg");
+  }
+}
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 734px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  html.no-js.edge .image-sellers.dock .glass-hardware,
+  html.text-zoom.edge .image-sellers.dock .glass-hardware,
+  html.edge .image-sellers.dock .glass-hardware,
+  html.fallback.edge .image-sellers.dock .glass-hardware {
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_dock_fallback__s0fduqp1smyy_small_2x.jpg");
+  }
+}
+html.no-js.edge .image-sellers.control-center .glass-hardware,
+html.text-zoom.edge .image-sellers.control-center .glass-hardware,
+html.edge .image-sellers.control-center .glass-hardware,
+html.fallback.edge .image-sellers.control-center .glass-hardware {
+  width: 1892px;
+  height: 1084px;
+  background-size: 1892px 1084px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_control_center_fallback__ge30dft03xay_large.jpg");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 1.5dppx),
+  (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi) {
+  html.no-js.edge .image-sellers.control-center .glass-hardware,
+  html.text-zoom.edge .image-sellers.control-center .glass-hardware,
+  html.edge .image-sellers.control-center .glass-hardware,
+  html.fallback.edge .image-sellers.control-center .glass-hardware {
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_control_center_fallback__ge30dft03xay_large_2x.jpg");
+  }
+}
+@media only screen and (max-width: 1068px) {
+  html.no-js.edge .image-sellers.control-center .glass-hardware,
+  html.text-zoom.edge .image-sellers.control-center .glass-hardware,
+  html.edge .image-sellers.control-center .glass-hardware,
+  html.fallback.edge .image-sellers.control-center .glass-hardware {
+    width: 1496px;
+    height: 856px;
+    background-size: 1496px 856px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_control_center_fallback__ge30dft03xay_medium.jpg");
+  }
+}
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 1068px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  html.no-js.edge .image-sellers.control-center .glass-hardware,
+  html.text-zoom.edge .image-sellers.control-center .glass-hardware,
+  html.edge .image-sellers.control-center .glass-hardware,
+  html.fallback.edge .image-sellers.control-center .glass-hardware {
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_control_center_fallback__ge30dft03xay_medium_2x.jpg");
+  }
+}
+@media only screen and (max-width: 734px) {
+  html.no-js.edge .image-sellers.control-center .glass-hardware,
+  html.text-zoom.edge .image-sellers.control-center .glass-hardware,
+  html.edge .image-sellers.control-center .glass-hardware,
+  html.fallback.edge .image-sellers.control-center .glass-hardware {
+    width: 770px;
+    height: 524px;
+    background-size: 770px 524px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_control_center_fallback__ge30dft03xay_small.jpg");
+  }
+}
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 734px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  html.no-js.edge .image-sellers.control-center .glass-hardware,
+  html.text-zoom.edge .image-sellers.control-center .glass-hardware,
+  html.edge .image-sellers.control-center .glass-hardware,
+  html.fallback.edge .image-sellers.control-center .glass-hardware {
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_control_center_fallback__ge30dft03xay_small_2x.jpg");
+  }
+}
+html.no-js.edge .image-sellers.notification-center .glass-hardware,
+html.text-zoom.edge .image-sellers.notification-center .glass-hardware,
+html.edge .image-sellers.notification-center .glass-hardware,
+html.fallback.edge .image-sellers.notification-center .glass-hardware {
+  width: 1892px;
+  height: 1084px;
+  background-size: 1892px 1084px;
+  background-repeat: no-repeat;
+  background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_notification_center_fallback__er63l2x7rtw2_large.jpg");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 1.5dppx),
+  (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi) {
+  html.no-js.edge .image-sellers.notification-center .glass-hardware,
+  html.text-zoom.edge .image-sellers.notification-center .glass-hardware,
+  html.edge .image-sellers.notification-center .glass-hardware,
+  html.fallback.edge .image-sellers.notification-center .glass-hardware {
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_notification_center_fallback__er63l2x7rtw2_large_2x.jpg");
+  }
+}
+@media only screen and (max-width: 1068px) {
+  html.no-js.edge .image-sellers.notification-center .glass-hardware,
+  html.text-zoom.edge .image-sellers.notification-center .glass-hardware,
+  html.edge .image-sellers.notification-center .glass-hardware,
+  html.fallback.edge .image-sellers.notification-center .glass-hardware {
+    width: 1496px;
+    height: 856px;
+    background-size: 1496px 856px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_notification_center_fallback__er63l2x7rtw2_medium.jpg");
+  }
+}
+@media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 1068px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 1068px) and (min-resolution: 144dpi) {
+  html.no-js.edge .image-sellers.notification-center .glass-hardware,
+  html.text-zoom.edge .image-sellers.notification-center .glass-hardware,
+  html.edge .image-sellers.notification-center .glass-hardware,
+  html.fallback.edge .image-sellers.notification-center .glass-hardware {
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_notification_center_fallback__er63l2x7rtw2_medium_2x.jpg");
+  }
+}
+@media only screen and (max-width: 734px) {
+  html.no-js.edge .image-sellers.notification-center .glass-hardware,
+  html.text-zoom.edge .image-sellers.notification-center .glass-hardware,
+  html.edge .image-sellers.notification-center .glass-hardware,
+  html.fallback.edge .image-sellers.notification-center .glass-hardware {
+    width: 770px;
+    height: 524px;
+    background-size: 770px 524px;
+    background-repeat: no-repeat;
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_notification_center_fallback__er63l2x7rtw2_small.jpg");
+  }
+}
+@media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (max-width: 734px) and (min-resolution: 1.5dppx),
+  only screen and (max-width: 734px) and (min-resolution: 144dpi) {
+  html.no-js.edge .image-sellers.notification-center .glass-hardware,
+  html.text-zoom.edge .image-sellers.notification-center .glass-hardware,
+  html.edge .image-sellers.notification-center .glass-hardware,
+  html.fallback.edge .image-sellers.notification-center .glass-hardware {
+    background-image: url("/v/macos/big-sur/c/images/overview/sellers/edge/sellers_notification_center_fallback__er63l2x7rtw2_small_2x.jpg");
+  }
+}
+.js .section-sellers {
+  --macos-dock-slide-duration: 0.8s;
+  --macos-dock-easing-function: easeOutQuad;
+  --macos-dock-y-translate: 70px;
+  --feature-slide-duration: 0.8s;
+  --feature-easing-function: easeOutQuad;
+  --feature-y-translate: -200px;
+}
+.js .section-sellers .hardware-wrapper .anim-macos-dock {
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: var(--macos-dock-slide-duration);
+  transition-duration: var(--macos-dock-slide-duration);
+  -webkit-transition-timing-function: var(--macos-dock-easing-function);
+  transition-timing-function: var(--macos-dock-easing-function);
+  will-change: opacity, transform;
+  -webkit-transform: translateX(-50%) translateY(--macos-dock-y-translate);
+  transform: translateX(-50%) translateY(--macos-dock-y-translate);
+}
+.js .section-sellers .hardware-wrapper .js-macos-dock-transition {
+  -webkit-transform: translateX(-50%) translateY(0);
+  transform: translateX(-50%) translateY(0);
+}
+.js .section-sellers .feature .anim-feature-item {
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+  -webkit-transition-duration: var(--feature-slide-duration);
+  transition-duration: var(--feature-slide-duration);
+  -webkit-transition-timing-function: var(--feature-easing-function);
+  transition-timing-function: var(--feature-easing-function);
+  will-change: opacity, transform;
+  opacity: 0;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+@media only screen and (max-width: 1068px) {
+  .js .section-sellers .feature .anim-feature-item {
+    -webkit-transition: none;
+    transition: none;
+    opacity: 1;
+  }
+}
+.js .section-sellers .feature .js-feature-item-engaged {
+  opacity: 1;
+}
+.js .section-sellers .feature .js-feature-item-transition {
+  -webkit-transform: translateY(var(--feature-y-translate));
+  transform: translateY(var(--feature-y-translate));
+}
+.js .section-sellers.static .js-feature-item-transition {
+  -webkit-transition: none;
+  transition: none;
+  -webkit-transform: unset;
+  transform: unset;
+  opacity: 1;
+}
+html.no-js .section-sellers .hardware-wrapper .anim-macos-dock,
+html.fallback .section-sellers .hardware-wrapper .anim-macos-dock,
+html.text-zoom .section-sellers .hardware-wrapper .anim-macos-dock,
+html.edge .section-sellers .hardware-wrapper .anim-macos-dock {
+  -webkit-transition: none;
+  transition: none;
+}
+html.no-js .section-sellers .feature .anim-feature-item,
+html.fallback .section-sellers .feature .anim-feature-item,
+html.text-zoom .section-sellers .feature .anim-feature-item,
+html.edge .section-sellers .feature .anim-feature-item {
+  -webkit-transition: none;
+  transition: none;
+  opacity: 1;
+}
+
+.glass-container .section-experience .image-experience {
+ display:block;
+ position:relative;
+ z-index:1
+}
+.glass-container::before,
+.section-experience .image-experience::before,
+.glass-container::after,
+.section-experience .image-experience::after {
+ content:'';
+ display:block;
+ position:absolute;
+ top:0;
+ left:0;
+ z-index:1
+}
+.glass-container .glass-hardware,
+.section-experience .image-experience .glass-hardware,
+.glass-container .glass-screen,
+.section-experience .image-experience .glass-screen {
+ display:block;
+ position:absolute;
+ top:0;
+ left:0
+}
+.glass-container .glass-hardware,
+.section-experience .image-experience .glass-hardware {
+ pointer-events:none;
+ z-index:3
+}
+.glass-container .glass-screen,
+.section-experience .image-experience .glass-screen {
+ z-index:4
+}
