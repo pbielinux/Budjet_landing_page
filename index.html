@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html class="js no-hero-fallback no-fallback" lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
@@ -17,30 +17,39 @@
 
 <body>
   <main id="main" class="main">
-    <section class="section section-hero">
+    <section class="section section-hero theme-dark">
       <div class="hero">
-        <div class="intro-text-block">
+        <div class="intro-text-block js-opacity-fade">
           <div class="centered-text-block">
-            <img class="logo" src="/images/Budjet Logo Wide PNG.png" alt="logo">
+            <img class="title logo" src="/images/Budjet Logo Wide PNG.png" alt="logo">
             <h1 class="title">Pensando em você construtor</h1>
             <h2 class="title title__massive">Nós reinventamos a<br>forma de orçar uma obra!</h2>
           </div>
         </div>
         
-        <div class="hero-hardware">
-          <img class="image-app-placeholder" src="/images/Home.png" />
-          <img class="image-screen-placeholder" src="/images/bg-engineer.png" />
+        <div class="hero-hardware image-hero-hardware">
+          <img class="image-screen-placeholder" src="/images/saved/bg-engineer.png" alt="">
         </div>
         
         <div class="intro-text">
-          <h1>Em apenas alguns clicks</h1>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          <header>
+            <h1 class="typography-hero-eyebrow animation-point intro-text-eyebrow js-show">Em apenas alguns clicks</h1>
+            <div class="typography-headline-super intro-text-subheader">
+              <div class="first-super animation-point js-show">
+                Orce suas obras
+              </div>
+              <div class="second-super animation-point js-show">
+                Mais rapido do que alguma vez fez
+              </div>
+            </div>
+          </header>
+          <p class="typography-hero-copy animation-point intro-text-body js-show">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
         </div>
       </div>
     </section>
     
     
-    <article class="section section-sellers section-pad-top static">
+    <article class="section section-sellers section-pad-top">
       <header class="section-header">
         <div class="section-content">
           <h2 class="section-header-headline typography-headline-elevated large-8 small-12">
@@ -56,17 +65,16 @@
       <div class="sticky-wrapper">
         <div class="sticky-content">
 
-          <div class="hardware-wrapper invisible">
-            <div class="image-sellers">
-              <div class="image-hardware">
+          <div class="hardware-wrapper">
+            <div class="glass-container image-sellers image-sellers-section">
+              <div class="glass-hardware image-hardware">
               </div>
             </div>
           </div>
 
           <div class="section-content text-transform-wrapper">
             <div class="features-wrapper">
-
-              <div class="row feature">
+              <div id="feature-1" class="row feature">
 
                 <div class="column large-4 medium-5 small-12 small-order-1">
                   <div class="feature-content-wrapper anim-feature-item">
@@ -86,8 +94,7 @@
                 </div>
 
               </div>
-
-              <div class="row feature">
+              <div id="feature-2" class="row feature">
 
                 <div class="column large-4 medium-5 small-12 small-order-1">
                   <div class="feature-content-wrapper anim-feature-item">
@@ -107,8 +114,7 @@
                 </div>
 
               </div>
-
-              <div class="row feature">
+              <div id="feature-3" class="row feature">
                 
                 <div class="column large-8 medium-7 small-12 small-order-0 fallback-lockup align-left">
                   <div class="glass-container image-sellers">
@@ -116,7 +122,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="column large-4 medium-5 small-12 small-order-1 align-right">
+                <div class="column large-4 medium-5 small-12 small-order-1 enhanced-align-right">
                   <div class="feature-content-wrapper anim-feature-item">
                     <h3 class="feature-item-headline">
                       Feature 3
@@ -128,8 +134,7 @@
                 </div>
 
               </div>
-
-              <div class="row feature">
+              <div id="feature-4" class="row feature">
 
                 <div class="column large-8 medium-7 small-12 small-order-0 fallback-lockup align-left">
                   <div class="glass-container image-sellers">
@@ -137,7 +142,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="column large-4 medium-5 small-12 small-order-1 align-right">
+                <div class="column large-4 medium-5 small-12 small-order-1 enhanced-align-right">
                   <div class="feature-content-wrapper anim-feature-item">
                     <h3 class="feature-item-headline">
                       Feature 4
@@ -149,11 +154,11 @@
                 </div>
 
               </div>
-
           </div>
         </div>
       </div>
     </article>
+
     
     <script src="app/js/bigsur.js"></script>
 </main>

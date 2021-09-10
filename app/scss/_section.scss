@@ -24,7 +24,7 @@
 /* .hardware-wrapper {
     display: none;
     visibility: hidden !important;
-} */
+}
 
 /* .image-sellers {
     @include breakpoint-down(large) {
@@ -94,79 +94,6 @@
 }
  */
 
-.section-sellers {
-    font-size: 18px;
-}
-
-.section-header-headline {
-    color: #2a6eff;
-}
-
-.features-wrapper {
-    @include breakpoint-down(large) {
-        position: static;
-        height: auto;
-        padding-top: 0;
-        margin-top: -110px;
-        margin-bottom: 88px;
-    };
-
-    @include breakpoint-up(large) {
-        position: relative;
-        padding-top: 60px;
-        height: 100vh;
-    };
-}
-
-.feature {
-    @include breakpoint-down(large) {
-        align-items: center;
-        margin-top: -40px;
-        transform: translateY(0);
-    };
-
-    @include breakpoint-up(large) {
-        will-change: transform;
-        position: absolute;
-        top: 40%;
-        transform: translateY(-50%);
-        transition-property: opacity, transform;
-        transition-duration: 0.8s;
-    
-        &:nth-child(2) {
-            top: calc(40% + 200px);
-        }
-        &:nth-child(4) {
-            top: calc(40% + 200px);
-        }
-    };
-}
-
-.feature-item-headline {
-    color: #2a6eff;
-}
-
-.anim-feature-item {
-    transition-delay: 0s;
-    transition-property: opacity, transform;
-    transition-duration: 0.8s;
-    transition-timing-function: easeOutQuad;
-    will-change: opacity, transform;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.fallback-lockup {
-    @include breakpoint-down(large) {
-        display: block;
-        transform: translateX(-105px) scale(0.7164);  
-    };
-
-    @include breakpoint-up(large) {
-        display: none;
-    };
-
-}
 
 .js-feature-item-engaged {
     opacity: 1;
@@ -174,4 +101,10 @@
 
 .js-feature-item-transition {
     transform: translateY(-200px);
+}
+
+.banner {
+    position: static;
+    background-image: linear-gradient(45deg, #006094 0%, #001936 80%);
+    height: 40vh;
 }
