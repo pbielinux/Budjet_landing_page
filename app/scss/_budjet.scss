@@ -417,7 +417,7 @@
     height: 684px;
     background-size: 1059px 684px;
     background-repeat: no-repeat;
-    background-image: url("/images/saved/hero_hardware__medium.png");
+    background-image: url("/images/saved/hero_hardware_medium.png");
   }
 }
 @media only screen and (max-width: 1068px) and (-webkit-min-device-pixel-ratio: 1.5),
@@ -427,7 +427,7 @@
     .section-hero
 
     .hero-hardware:before {
-    background-image: url("/images/saved/hero_hardware__medium_2x.png");
+    background-image: url("/images/saved/hero_hardware_medium_2x.png");
   }
 }
 @media only screen and (max-width: 734px) {
@@ -439,7 +439,7 @@
     height: 365px;
     background-size: 549px 365px;
     background-repeat: no-repeat;
-    background-image: url("/images/saved/hero_hardware__small.png");
+    background-image: url("/images/saved/hero_hardware_small.png");
   }
 }
 @media only screen and (max-width: 734px) and (-webkit-min-device-pixel-ratio: 1.5),
@@ -448,7 +448,7 @@
   .no-hero-fallback
     .section-hero
     .hero-hardware:before {
-    background-image: url("/images/saved/hero_hardware__small_2x.png");
+    background-image: url("/images/saved/hero_hardware_small_2x.png");
   }
 }
 @media only screen and (max-width: 1068px) {

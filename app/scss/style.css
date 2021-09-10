@@ -548,7 +548,7 @@ html.ac-gn-segmentbar-visible {
     height: 684px;
     background-size: 1059px 684px;
     background-repeat: no-repeat;
-    background-image: url("/images/saved/hero_hardware__medium.png");
+    background-image: url("/images/saved/hero_hardware_medium.png");
   }
 }
 
@@ -556,7 +556,7 @@ html.ac-gn-segmentbar-visible {
   .no-hero-fallback
 .section-hero
 .hero-hardware:before {
-    background-image: url("/images/saved/hero_hardware__medium_2x.png");
+    background-image: url("/images/saved/hero_hardware_medium_2x.png");
   }
 }
 
@@ -568,7 +568,7 @@ html.ac-gn-segmentbar-visible {
     height: 365px;
     background-size: 549px 365px;
     background-repeat: no-repeat;
-    background-image: url("/images/saved/hero_hardware__small.png");
+    background-image: url("/images/saved/hero_hardware_small.png");
   }
 }
 
@@ -576,7 +576,7 @@ html.ac-gn-segmentbar-visible {
   .no-hero-fallback
 .section-hero
 .hero-hardware:before {
-    background-image: url("/images/saved/hero_hardware__small_2x.png");
+    background-image: url("/images/saved/hero_hardware_small_2x.png");
   }
 }
 

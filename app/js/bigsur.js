@@ -1,11 +1,12 @@
 const features = document.querySelectorAll('.feature-content-wrapper');
 const section = document.querySelector('.section-sellers');
 const hardware = document.querySelector('.hardware-wrapper');
-
+var vw;
+var vh;
 
 window.addEventListener("resize", function(event) {
-  let vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-  let vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+  vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+  vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
   if (vw < 1069) {
       section.classList.add('static');
       hardware.classList.add('hidden');
@@ -16,12 +17,12 @@ window.addEventListener("resize", function(event) {
 });
   
 
-      gsap.set(".image-sellers-section", {
-        scaleX: 0.7164,
-        scaleY: 0.7164,
-        xPercent: -50,
-        left: "50%"
-      });
+  gsap.set(".image-sellers-section", {
+    scaleX: 5.7164,
+    scaleY: 5.7164,
+    xPercent: -50,
+    left: "50%"
+  });
       
       gsap.timeline({
         scrollTrigger: {
@@ -30,10 +31,10 @@ window.addEventListener("resize", function(event) {
           start: "top top+=200",
           end: "top+=1200 top",
           scrub: 1,
-          markers: {
+          /* markers: {
             startColor: "lime",
             endColor: "lime",
-          }
+          } */
         }
       }).to(".image-sellers-section", {
         x: 500,
@@ -78,12 +79,12 @@ window.addEventListener("resize", function(event) {
               feature.classList.remove('js-feature-item-transition');
             }
           },
-          markers: {
+          /* markers: {
             startColor: "fuchsia",
             endColor: "fuchsia",
             fontSize: "1rem",
             indent: 100
-          }
+          } */
         });
       });
 
@@ -92,11 +93,20 @@ window.addEventListener("resize", function(event) {
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.set(".hero-hardware", {
-  scaleX: 2.13507,
-  scaleY: 2.13507,
-  Y: 7
-});
+
+if (vw < 700) {
+  gsap.set(".hero-hardware", {
+    scaleX: 2.13507,
+    scaleY: 2.13507,
+    Y: 7
+  });
+} else {
+  gsap.set(".hero-hardware", {
+    scaleX: 5.13507,
+    scaleY: 5.13507,
+    Y: 7
+  });
+}
 
 gsap.to(".title", {
   opacity: 0,
